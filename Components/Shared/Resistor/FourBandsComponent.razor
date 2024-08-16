@@ -1,0 +1,43 @@
+﻿<div id="resistor-content">
+    <div class="part1"></div>
+    <div class="part2">
+        <div class="band" style="background: @FirstBandColor; box-shadow: @FirstBandColor 0px 0px 5px;"> </div>
+    </div>
+    <div id="part3">
+        <div class="band" style="background: @SecondBandColor; box-shadow: @SecondBandColor 0px 0px 5px;"></div>
+        <div class="band" style="background: #216481; box-shadow: #216481 0px 0px 5px;"></div>
+        <div class="band" style="background: @ThirdBandColor; box-shadow: @ThirdBandColor 0px 0px 5px;"></div>
+        <div class="band" style="background: #216481; box-shadow: #216481 0px 0px 5px;"></div>
+    </div>
+    <div class="part2">
+        <div class="band" style="background: @FourthBandColor; box-shadow: FourthBandColor 0px 0px 5px;"></div>
+    </div>
+    <div class="part1"></div>
+</div>
+
+
+@code {
+    /// <summary>
+    /// Cor (nome ou hex) da primeira faixa.
+    /// </summary>
+    [Parameter]
+    public string FirstBandColor { get; set; } = "red";
+
+    /// <summary>
+    /// Cor (nome ou hex) da segundafaixa.
+    /// </summary>
+    [Parameter]
+    public string SecondBandColor { get; set; } = "cyan";
+
+    /// <summary>
+    /// Cor (nome ou hex) da terceira faixa (multiplicador).
+    /// </summary>
+    [Parameter]
+    public string ThirdBandColor { get; set; } = "cyan";
+
+    /// <summary>
+    /// Cor (nome ou hex) da quarta faixa (tolerância).
+    /// </summary>
+    [Parameter]
+    public string FourthBandColor { get; set; } = "cyan";
+}
