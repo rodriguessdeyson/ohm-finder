@@ -1,4 +1,4 @@
-﻿namespace resistor_color_code_app.Domain.Enum
+﻿namespace ResistorColorCode.Domain.Enum
 {
     public enum ResistorBandEnum
     {

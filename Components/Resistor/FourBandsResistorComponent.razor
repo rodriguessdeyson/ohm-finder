@@ -1,0 +1,142 @@
+﻿<div style="width: 100%" class="row">
+    <div
+        class="col-md-6 col-sm-12 d-flex justify-content-center align-self-center">
+        <FourBandsComponent FirstBandColor="@FirstBand.Color"
+                            SecondBandColor="@SecondBand.Color"
+                            MultiplierBandColor="@MultiplierBand.Color"
+                            ToleranceBandColor="@ToleranceBand.Color" />
+    </div>
+    <div class="col-md-6 col-sm-12 d-flex flex-column justify-content-center align-self-center">
+        <div>
+            <div class="d-flex align-items-center">
+                <LedComponent BandColor="@FirstBand.Color" />
+                <label class="mx-2">First band: </label>
+            </div>
+            <InputSelect
+                @bind-Value:get="FirstBandId"
+                @bind-Value:set="SetFirstBand"
+                class="form-control my-2"
+                style="background-color:#263540; color: white; border-color: #263540;"
+            >
+                @foreach (var value in FirstBandValues)
+                {
+                    <option value="@value.Id">@value.Label</option>
+                }
+            </InputSelect>
+        </div>
+        <div style="width: 100%">
+            <div class="d-flex align-items-center">
+                <LedComponent BandColor="@SecondBand.Color" />
+                <label class="mx-2">Second band: </label>
+            </div>
+            <InputSelect @bind-Value:get="SecondBandId"
+                         @bind-Value:set="SetSecondBand"
+                         class="form-control my-2"
+                         style="background-color:#263540; color: white; border-color: #263540;">
+                @foreach (var value in SecondBandValues)
+                {
+                    <option value="@value.Id">@value.Label</option>
+                }
+            </InputSelect>
+        </div>
+        <div style="width: 100%">
+            <div class="d-flex align-items-center">
+                <LedComponent BandColor="@MultiplierBand.Color" />
+                <label class="mx-2">Multiplier band: </label>
+            </div>
+            <InputSelect @bind-Value:get="MultiplierBandId"
+                         @bind-Value:set="SetMultiplierBand"
+                         class="form-control my-2"
+                         style="background-color:#263540; color: white; border-color: #263540;">
+                @foreach (var value in MultiplierBandValues)
+                {
+                    <option value="@value.Id">@value.Label</option>
+                }
+            </InputSelect>
+        </div>
+        <div style="width: 100%">
+            <div class="d-flex align-items-center">
+                <LedComponent BandColor="@ToleranceBand.Color" />
+                <label class="mx-2">Tolerance band: </label>
+            </div>
+            <InputSelect @bind-Value:get="ToleranceBandId"
+                         @bind-Value:set="SetToleranceBand"
+                         class="form-control my-2"
+                         style="background-color:#263540; color: white; border-color: #263540;">
+                @foreach (var value in ToleranceBandValues)
+                {
+                    <option value="@value.Id">@value.Label</option>
+                }
+            </InputSelect>
+        </div>
+    </div>
+</div>
+
+@using ResistorColorCode.Components.Shared.Resistor
+@using ResistorColorCode.Domain.Models
+@using ResistorColorCode.Domain.Services
+@code {
+    private string FirstBandId = "-1";
+    private string SecondBandId = "-1";
+    private string MultiplierBandId = "-1";
+    private string ToleranceBandId = "-1";
+
+    private IList<ResistorDigitBandModel> FirstBandValues = ResistorService.DigitsBandValues();
+    private IList<ResistorDigitBandModel> SecondBandValues = ResistorService.DigitsBandValues();
+    private IList<ResistorDigitBandModel> ThirdBandValues = ResistorService.DigitsBandValues();
+    private IList<ResistorDigitBandModel> MultiplierBandValues = ResistorService.MultiplierBandValues();
+    private IList<ResistorDigitBandModel> ToleranceBandValues = ResistorService.ToleranceBandValues();
+
+    private ResistorDigitBandModel FirstBand { get; set; }
+    private ResistorDigitBandModel SecondBand { get; set; }
+    private ResistorDigitBandModel MultiplierBand { get; set; }
+    private ResistorDigitBandModel ToleranceBand { get; set; }
+
+    public FourBandsResistorComponent()
+    {
+        FirstBand = new ResistorBandModel("cyan");
+        SecondBand = new ResistorBandModel("cyan");
+        MultiplierBand = new ResistorBandModel("cyan");
+        ToleranceBand = new ResistorBandModel("cyan");
+    }
+
+    private void SetFirstBand(string value)
+    {
+        ResistorDigitBandModel? selected = FirstBandValues.SingleOrDefault(e => e.Id == int.Parse(value));
+        if (selected != null)
+        {
+            FirstBand = selected;
+            FirstBandId = selected.Id.ToString();
+        }
+    }
+
+    private void SetSecondBand(string value)
+    {
+        ResistorDigitBandModel? selected = SecondBandValues.SingleOrDefault(e => e.Id == int.Parse(value));
+        if (selected != null)
+        {
+            SecondBand = selected;
+            SecondBandId = selected.Id.ToString();
+        }
+    }
+
+    private void SetMultiplierBand(string value)
+    {
+        ResistorDigitBandModel? selected = MultiplierBandValues.SingleOrDefault(e => e.Id == int.Parse(value));
+        if (selected != null)
+        {
+            MultiplierBand = selected;
+            MultiplierBandId = selected.Id.ToString();
+        }
+    }
+
+    private void SetToleranceBand(string value)
+    {
+        ResistorDigitBandModel? selected = ToleranceBandValues.SingleOrDefault(e => e.Id == int.Parse(value));
+        if (selected != null)
+        {
+            ToleranceBand = selected;
+            ToleranceBandId = selected.Id.ToString();
+        }
+    }
+}

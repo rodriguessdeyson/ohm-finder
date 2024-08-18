@@ -46,14 +46,13 @@
     </div>
 </div>
 
-@using resistor_color_code_app.Components.Shared.Card
-@using resistor_color_code_app.Components.Shared.Resistor
+@using ResistorColorCode.Components.Shared.Card
+@using ResistorColorCode.Components.Shared.Resistor
 @inject NavigationManager navManager
 @code {
     private void IncrementCount(ResistorBandEnum band)
     {
         navManager.NavigateTo($"/calculator?type={(int)band}");
-        
         // System.Diagnostics.Debug.WriteLine(band);
     }
 }

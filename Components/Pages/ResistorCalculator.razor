@@ -1,6 +1,5 @@
 ﻿@page "/calculator"
 
-
 <div class="container">
     <div class="row">
         <div class="col-12">
@@ -11,81 +10,26 @@
     <div id="header">
         <div class="row">
             <p>Choose the resistor model based on number of bands</p>
-            <div class="col-md-6 col-sm-12 d-flex justify-content-center align-self-center">
-                @switch ((ResistorBandEnum)NumBands)
-                {
-                    case ResistorBandEnum.Four:
-                        <FourBandsComponent />
-                        break;
-                    case ResistorBandEnum.Five:
-                        <FiveBandsComponent />
-                        break;
-                    case ResistorBandEnum.Six:
-                        <SixBandsComponent />
-                        break;
-                }
-            </div>
-            <div class="col-md-6 col-sm-12 d-flex justify-content-center align-self-center">
-                <div class="row">
-                    <label>First band:</label>
-                    <select class="form-control" @bind="@SelectedCountryID" style="background-color:#263540; color: white; border-color: #263540">
-                        <option value=""></option>
-                        @foreach (var country in CountryList)
-                        {
-                            <option value="@country.Code">
-                                <div>
-                                    <LedComponent />
-                                    @country.Name
-                                </div>
-
-                            </option>
-                        }
-                    </select>
-                </div>
-            </div>
         </div>
+        @switch ((ResistorBandEnum)NumBands)
+        {
+            case ResistorBandEnum.Four:
+                <FourBandsResistorComponent />
+                break;
+            case ResistorBandEnum.Five:
+                break;
+            case ResistorBandEnum.Six:
+                break;
+        }
     </div>
 </div>
 
 
-@using resistor_color_code_app.Components.Resistor
-@using resistor_color_code_app.Components.Shared.Resistor
-@using resistor_color_code_app.Components.Shared.Led
-@using resistor_color_code_app.Domain.Enum
+@using ResistorColorCode.Components.Resistor
+@using ResistorColorCode.Domain.Enum
 @code {
-    
+
     [Parameter, SupplyParameterFromQuery(Name = "type")]
     public int NumBands { get; set; }
 
-    string selectedCountryID;
-
-    private void Rcebe()
-    {
-        System.Diagnostics.Debug.WriteLine(NumBands);
-    }
-
-    string SelectedCountryID
-    {
-        get => selectedCountryID;
-        set
-        {
-            selectedCountryID = value;
-
-        }
-    }
-
-    List<Country> CountryList = new List<Country>() { new Country("USA", "United States"), new Country("UK", "United Kingdom") };
-
-    public class Country
-    {
-
-        public Country(string code, string name)
-        {
-            Code = code;
-            Name = name;
-        }
-        public string Code { get; set; }
-        public string Name { get; set; }
-
-    }
 }

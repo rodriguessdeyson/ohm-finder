@@ -1,8 +1,8 @@
 ﻿<maui:MauiWinUIApplication
-    x:Class="resistor_color_code_app.WinUI.App"
+    x:Class="ResistorColorCode.WinUI.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:maui="using:Microsoft.Maui"
-    xmlns:local="using:resistor_color_code_app.WinUI">
+    xmlns:local="using:ResistorColorCode.WinUI">
 
 </maui:MauiWinUIApplication>

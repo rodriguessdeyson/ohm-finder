@@ -1,11 +1,10 @@
-﻿namespace resistor_color_code_app
+﻿namespace ResistorColorCode
 {
-    [XamlCompilation(XamlCompilationOptions.Skip)]
     public partial class MainPage : ContentPage
-	{
-		public MainPage()
-		{
-			InitializeComponent();
-		}
-	}
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+        }
+    }
 }
