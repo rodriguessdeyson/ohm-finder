@@ -1,0 +1,60 @@
+﻿@page "/"
+@inject NavigationManager navManager
+@inject IStringLocalizer<AppResources> Localizer
+@using ResistorColorCode.App.Components.Shared.Card
+@using ResistorColorCode.App.Components.Shared.Resistor
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1>@Localizer["HeaderTitle"]</h1>
+            <p>@Localizer["HomeHeaderDescription"]</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="row btn-resistor" @onclick="() => IncrementCount(ResistorBandEnum.Four)">
+                <div class="col-md-6 col-sm-12 d-flex justify-content-center align-self-center">
+                    <FourBandsComponent />
+                </div>
+                <div class="col-md-6 col-sm-12 d-flex justify-content-center align-self-center">
+                    <div>
+                        <h2>4 Bands</h2>
+                        <p>3 bands for resistor value and 1 band for tolerance</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row btn-resistor" @onclick="() => IncrementCount(ResistorBandEnum.Five)">
+                <div class="col-md-6 col-sm-12 d-flex justify-content-center align-self-center">
+                    <FiveBandsComponent />
+                </div>
+                <div class="col-md-6 col-sm-12 d-flex justify-content-center align-self-center">
+                    <div>
+                        <h2>5 Bands</h2>
+                        <p>4 bands for resistor value and 1 band for tolerance</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row btn-resistor" @onclick="() => IncrementCount(ResistorBandEnum.Six)">
+                    <div class="col-md-6 col-sm-12 d-flex justify-content-center align-self-center">
+                    <SixBandsComponent />
+                </div>
+                <div class="col-md-6 col-sm-12 d-flex justify-content-center align-self-center">
+                    <div>
+                        <h2>6 Bands</h2>
+                        <p>4 bands for resistor value and 2 bands for tolerance</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@code {
+    private void IncrementCount(ResistorBandEnum band)
+    {
+        navManager.NavigateTo($"/calculator?type={(int)band}");
+        // System.Diagnostics.Debug.WriteLine(band);
+    }
+}

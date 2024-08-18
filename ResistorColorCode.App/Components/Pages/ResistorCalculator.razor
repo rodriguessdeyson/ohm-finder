@@ -1,0 +1,36 @@
+﻿@page "/calculator"
+
+@inject IStringLocalizer<AppResources> Localizer
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1>@Localizer["HeaderTitle"]</h1>
+            <p>@Localizer["ResistorHeaderDescription"]</p>
+        </div>
+    </div>
+    <div id="header">
+        <div class="row">
+            <p>@Localizer["ResistorBandReading"]</p>
+        </div>
+        @switch ((ResistorBandEnum)NumBands)
+        {
+            case ResistorBandEnum.Four:
+                <FourBandsResistorComponent />
+                break;
+            case ResistorBandEnum.Five:
+                break;
+            case ResistorBandEnum.Six:
+                break;
+        }
+    </div>
+</div>
+
+@using ResistorColorCode.App.Components.Resistor
+@using ResistorColorCode.Domain.Resistors.Enum
+@code {
+
+    [Parameter, SupplyParameterFromQuery(Name = "type")]
+    public int NumBands { get; set; }
+
+}
