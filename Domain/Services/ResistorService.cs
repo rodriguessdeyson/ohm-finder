@@ -22,7 +22,7 @@ namespace ResistorColorCode.Domain.Services
             ];
         }
 
-        public static IList<ResistorDigitBandModel> MultiplierBandValues()
+        public static IList<ResistorMultiplierBandModel> MultiplierBandValues()
         {
             return
             [
@@ -42,18 +42,7 @@ namespace ResistorColorCode.Domain.Services
 
             ];
         }
-    <option class="multiplier" value="1">black</option>
-    <option class="multiplier" value="10">brown</option>
-    <option class="multiplier" value="100">red</option>
-    <option class="multiplier" value="1000">orange</option>
-    <option class="multiplier" value="10000">yellow</option>
-    <option class="multiplier" value="100000">green</option>
-    <option class="multiplier" value="1000000">blue</option>
-    <option class="multiplier" value="100000000">violet</option>
-    <option class="multiplier" value="1000000000">grey</option>
-    <option class="multiplier" value="10000000000">white</option>
-    <option class="multiplier" value="0.1">gold</option>
-    <option class="multiplier" value="0.01">silver</option>
+
         public static IList<ResistorDigitBandModel> ToleranceBandValues()
         {
             return
