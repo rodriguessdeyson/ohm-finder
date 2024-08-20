@@ -1,0 +1,27 @@
+﻿<CardComponent>
+    <div>
+        <p>Valor do resistor: @ResistorValue()</p>
+        <span>@Disclaimer</span>
+    </div>
+</CardComponent>
+
+@code {
+    private double _value;
+    private string Prefix = $"{string.Empty}Ω";
+
+    [Parameter]
+    public required double Value { get; set; }
+
+    [Parameter]
+    public string? Disclaimer { get; set; }
+
+    private string ResistorValue()
+    {
+        if (Value > 1000000)
+            return $"{Value / 1000000}M Ω";
+        else if (Value > 1000)
+            return $"{Value / 1000}k Ω";
+        else
+            return $"{Value} Ω";
+    }
+}
