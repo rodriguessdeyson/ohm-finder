@@ -106,7 +106,7 @@ namespace ResistorColorCode.App.Resources.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to A leitura do resistor deve ser feita direito porra.
         /// </summary>
         internal static string ResistorBandReading {
             get {
@@ -115,11 +115,74 @@ namespace ResistorColorCode.App.Resources.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to First band.
+        /// </summary>
+        internal static string ResistorFirstBand {
+            get {
+                return ResourceManager.GetString("ResistorFirstBand", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fourth band.
+        /// </summary>
+        internal static string ResistorFourthBand {
+            get {
+                return ResourceManager.GetString("ResistorFourthBand", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fill the colors of the resistor bands.
         /// </summary>
         internal static string ResistorHeaderDescription {
             get {
                 return ResourceManager.GetString("ResistorHeaderDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Multiplier band.
+        /// </summary>
+        internal static string ResistorMultiplierBand {
+            get {
+                return ResourceManager.GetString("ResistorMultiplierBand", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Second band.
+        /// </summary>
+        internal static string ResistorSecondBand {
+            get {
+                return ResourceManager.GetString("ResistorSecondBand", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Temperature coeficient.
+        /// </summary>
+        internal static string ResistorTemperatureBand {
+            get {
+                return ResourceManager.GetString("ResistorTemperatureBand", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Third band.
+        /// </summary>
+        internal static string ResistorThirdBand {
+            get {
+                return ResourceManager.GetString("ResistorThirdBand", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rolerance band.
+        /// </summary>
+        internal static string ResistorToleranceBand {
+            get {
+                return ResourceManager.GetString("ResistorToleranceBand", resourceCulture);
             }
         }
     }

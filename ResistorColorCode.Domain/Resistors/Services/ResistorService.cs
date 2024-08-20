@@ -35,7 +35,7 @@ namespace ResistorColorCode.Domain.Resistors.Services
                 new (7,  "Azul",     "blue",   Math.Pow(10, 6)),
                 new (8,  "Violeta",  "violet", Math.Pow(10, 7)),
                 new (9, "Ouro",      "gold",   Math.Pow(10, -1)),
-                new (10, "Prata",    "silver", Math.Pow(10, 2))
+                new (10, "Prata",    "silver", Math.Pow(10, -2))
             ];
         }
 

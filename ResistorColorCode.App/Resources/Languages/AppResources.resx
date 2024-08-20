@@ -133,9 +133,30 @@
     <value>Red</value>
   </data>
   <data name="ResistorBandReading" xml:space="preserve">
-    <value />
+    <value>A leitura do resistor deve ser feita direito porra</value>
+  </data>
+  <data name="ResistorFirstBand" xml:space="preserve">
+    <value>First band</value>
+  </data>
+  <data name="ResistorFourthBand" xml:space="preserve">
+    <value>Fourth band</value>
   </data>
   <data name="ResistorHeaderDescription" xml:space="preserve">
-    <value />
+    <value>Fill the colors of the resistor bands</value>
+  </data>
+  <data name="ResistorMultiplierBand" xml:space="preserve">
+    <value>Multiplier band</value>
+  </data>
+  <data name="ResistorSecondBand" xml:space="preserve">
+    <value>Second band</value>
+  </data>
+  <data name="ResistorTemperatureBand" xml:space="preserve">
+    <value>Temperature coeficient</value>
+  </data>
+  <data name="ResistorThirdBand" xml:space="preserve">
+    <value>Third band</value>
+  </data>
+  <data name="ResistorToleranceBand" xml:space="preserve">
+    <value>Rolerance band</value>
   </data>
 </root>

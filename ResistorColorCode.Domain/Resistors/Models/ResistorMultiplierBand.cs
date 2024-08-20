@@ -78,11 +78,11 @@ namespace ResistorColorCode.Domain.Resistors.Models
                 Math.Pow(10, 6),
                 Math.Pow(10, 7),
                 Math.Pow(10, -1),
-                Math.Pow(10, 2),
+                Math.Pow(10, -2),
             ];
 
             if (!allowedValues.Contains(value))
-                throw new ArgumentException($"O valor não é permitida. Valor: {value}: Permitidos: {string.Join(',', allowedValues)}", nameof(value));
+                throw new ArgumentException($"O valor não é permitido. Valor: {value}: Permitidos: {string.Join(',', allowedValues)}", nameof(value));
 
             Value = value;
         }

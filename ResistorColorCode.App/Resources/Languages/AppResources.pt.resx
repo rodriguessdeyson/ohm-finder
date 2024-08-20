@@ -126,4 +126,10 @@
   <data name="Red" xml:space="preserve">
     <value>Vermelho</value>
   </data>
+  <data name="ResistorBandReading" xml:space="preserve">
+    <value>A leitura do resistor deve ser feita direito porra</value>
+  </data>
+  <data name="ResistorHeaderDescription" xml:space="preserve">
+    <value>Fill the colors of the resistor bands</value>
+  </data>
 </root>
