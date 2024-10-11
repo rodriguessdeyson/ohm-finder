@@ -5,56 +5,66 @@
 @using ResistorColorCode.App.Components.Shared.Resistor
 
 <div class="container">
-    <div class="row">
-        <div class="col-12">
-            <h1>@Localizer["HeaderTitle"]</h1>
-            <p>@Localizer["HomeHeaderDescription"]</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-12">
-            <div class="row btn-resistor" @onclick="() => IncrementCount(ResistorBandEnum.Four)">
-                <div class="col-md-6 col-sm-12 d-flex justify-content-center align-self-center">
-                    <FourBandsComponent />
-                </div>
-                <div class="col-md-6 col-sm-12 d-flex justify-content-center align-self-center">
-                    <div>
-                        <h2>4 Bands</h2>
-                        <p>3 bands for resistor value and 1 band for tolerance</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row btn-resistor" @onclick="() => IncrementCount(ResistorBandEnum.Five)">
-                <div class="col-md-6 col-sm-12 d-flex justify-content-center align-self-center">
-                    <FiveBandsComponent />
-                </div>
-                <div class="col-md-6 col-sm-12 d-flex justify-content-center align-self-center">
-                    <div>
-                        <h2>5 Bands</h2>
-                        <p>4 bands for resistor value and 1 band for tolerance</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row btn-resistor" @onclick="() => IncrementCount(ResistorBandEnum.Six)">
-                    <div class="col-md-6 col-sm-12 d-flex justify-content-center align-self-center">
-                    <SixBandsComponent />
-                </div>
-                <div class="col-md-6 col-sm-12 d-flex justify-content-center align-self-center">
-                    <div>
-                        <h2>6 Bands</h2>
-                        <p>4 bands for resistor value and 2 bands for tolerance</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+	<div class="row">
+		<div class="col-12">
+			<h1>@Localizer["HeaderTitle"]</h1>
+			<p>@Localizer["HomeHeaderDescription"]</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-12">
+			<div class="row btn-resistor" @onclick="() => GoToResistorComponent(ResistorBandEnum.Four)">
+				<div class="col-md-6 col-sm-12 d-flex justify-content-center align-self-center">
+					<FourBandsResistorComponent />
+				</div>
+				<div class="col-md-6 col-sm-12 d-flex justify-content-center align-self-center">
+					<div>
+						<h2>@Localizer["FourBandResistorType"]</h2>
+						<p>3 bands for resistor value and 1 band for tolerance</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="row btn-resistor" @onclick="() => GoToResistorComponent(ResistorBandEnum.Five)">
+				<div class="col-md-6 col-sm-12 d-flex justify-content-center align-self-center">
+					<FiveBandsResistorComponent />
+				</div>
+				<div class="col-md-6 col-sm-12 d-flex justify-content-center align-self-center">
+					<div>
+						<h2>@Localizer["FiveBandResistorType"]</h2>
+						<p>4 bands for resistor value and 1 band for tolerance</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="row btn-resistor" @onclick="() => GoToResistorComponent(ResistorBandEnum.Six)">
+					<div class="col-md-6 col-sm-12 d-flex justify-content-center align-self-center">
+					<SixBandsResistorComponent />
+				</div>
+				<div class="col-md-6 col-sm-12 d-flex justify-content-center align-self-center">
+					<div>
+						<h2>@Localizer["SixBandResistorType"]</h2>
+						<p>4 bands for resistor value and 2 bands for tolerance</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 
-
 @code {
-    private void IncrementCount(ResistorBandEnum band)
-    {
-        navManager.NavigateTo($"/calculator?type={(int)band}");
-        // System.Diagnostics.Debug.WriteLine(band);
-    }
+
+	protected override void OnInitialized()
+	{
+	}
+
+	protected override async Task OnAfterRenderAsync(bool firstRender)
+	{
+	}
+
+	private void GoToResistorComponent(ResistorBandEnum band)
+	{
+		navManager.NavigateTo($"/calculator?type={(int)band}");
+		// System.Diagnostics.Debug.WriteLine(band);
+	}
 }

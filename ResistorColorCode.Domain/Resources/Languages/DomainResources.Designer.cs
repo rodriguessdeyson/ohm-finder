@@ -61,11 +61,245 @@ namespace ResistorColorCode.Domain.Resources.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Red.
+        ///   Looks up a localized string similar to Black (0).
+        /// </summary>
+        internal static string BlackBand {
+            get {
+                return ResourceManager.GetString("BlackBand", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Black (1 Ω).
+        /// </summary>
+        internal static string BlackMultiplierBand {
+            get {
+                return ResourceManager.GetString("BlackMultiplierBand", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Blue (6).
+        /// </summary>
+        internal static string BlueBand {
+            get {
+                return ResourceManager.GetString("BlueBand", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Blue (1 MΩ).
+        /// </summary>
+        internal static string BlueMultiplierBand {
+            get {
+                return ResourceManager.GetString("BlueMultiplierBand", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Blue (± 0.25%).
+        /// </summary>
+        internal static string BlueToleranceBand {
+            get {
+                return ResourceManager.GetString("BlueToleranceBand", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Brown (1).
+        /// </summary>
+        internal static string BrownBand {
+            get {
+                return ResourceManager.GetString("BrownBand", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Brown (10 Ω).
+        /// </summary>
+        internal static string BrownMultiplierBand {
+            get {
+                return ResourceManager.GetString("BrownMultiplierBand", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Brown (± 1%).
+        /// </summary>
+        internal static string BrownToleranceBand {
+            get {
+                return ResourceManager.GetString("BrownToleranceBand", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Gold (0,01 Ω).
+        /// </summary>
+        internal static string GoldMultiplierBand {
+            get {
+                return ResourceManager.GetString("GoldMultiplierBand", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Gold (± 5%).
+        /// </summary>
+        internal static string GoldToleranceBand {
+            get {
+                return ResourceManager.GetString("GoldToleranceBand", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Green (5).
+        /// </summary>
+        internal static string GreenBand {
+            get {
+                return ResourceManager.GetString("GreenBand", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Green (100 KΩ).
+        /// </summary>
+        internal static string GreenMultiplierBand {
+            get {
+                return ResourceManager.GetString("GreenMultiplierBand", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Green (± 0.5%).
+        /// </summary>
+        internal static string GreenToleranceBand {
+            get {
+                return ResourceManager.GetString("GreenToleranceBand", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Grey (8).
+        /// </summary>
+        internal static string GreyBand {
+            get {
+                return ResourceManager.GetString("GreyBand", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Orange (3).
+        /// </summary>
+        internal static string OrangeBand {
+            get {
+                return ResourceManager.GetString("OrangeBand", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Orange (1 KΩ).
+        /// </summary>
+        internal static string OrangeMultiplierBand {
+            get {
+                return ResourceManager.GetString("OrangeMultiplierBand", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Red (2).
         /// </summary>
         internal static string RedBand {
             get {
                 return ResourceManager.GetString("RedBand", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Red (100 Ω).
+        /// </summary>
+        internal static string RedMultiplierBand {
+            get {
+                return ResourceManager.GetString("RedMultiplierBand", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Red (± 2%).
+        /// </summary>
+        internal static string RedToleranceBand {
+            get {
+                return ResourceManager.GetString("RedToleranceBand", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Silver (0,01 Ω).
+        /// </summary>
+        internal static string SilverMultiplierBand {
+            get {
+                return ResourceManager.GetString("SilverMultiplierBand", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Silver (± 10%).
+        /// </summary>
+        internal static string SilverToleranceBand {
+            get {
+                return ResourceManager.GetString("SilverToleranceBand", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Violet (7).
+        /// </summary>
+        internal static string VioletBand {
+            get {
+                return ResourceManager.GetString("VioletBand", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Violet (10 MΩ).
+        /// </summary>
+        internal static string VioletMultiplierBand {
+            get {
+                return ResourceManager.GetString("VioletMultiplierBand", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Violet (± 0.1%).
+        /// </summary>
+        internal static string VioletToleranceBand {
+            get {
+                return ResourceManager.GetString("VioletToleranceBand", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to White (9).
+        /// </summary>
+        internal static string WhiteBand {
+            get {
+                return ResourceManager.GetString("WhiteBand", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Yellow (4).
+        /// </summary>
+        internal static string YellowBand {
+            get {
+                return ResourceManager.GetString("YellowBand", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Yellow (10 KΩ).
+        /// </summary>
+        internal static string YellowMultiplierBand {
+            get {
+                return ResourceManager.GetString("YellowMultiplierBand", resourceCulture);
             }
         }
     }

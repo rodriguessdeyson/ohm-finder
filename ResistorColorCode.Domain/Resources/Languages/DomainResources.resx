@@ -117,7 +117,85 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="BlackBand" xml:space="preserve">
+    <value>Black (0)</value>
+  </data>
+  <data name="BlueBand" xml:space="preserve">
+    <value>Blue (6)</value>
+  </data>
+  <data name="BrownBand" xml:space="preserve">
+    <value>Brown (1)</value>
+  </data>
+  <data name="GoldMultiplierBand" xml:space="preserve">
+    <value>Gold (0,01 Ω)</value>
+  </data>
+  <data name="GreenBand" xml:space="preserve">
+    <value>Green (5)</value>
+  </data>
+  <data name="GreyBand" xml:space="preserve">
+    <value>Grey (8)</value>
+  </data>
+  <data name="OrangeBand" xml:space="preserve">
+    <value>Orange (3)</value>
+  </data>
   <data name="RedBand" xml:space="preserve">
-    <value>Red</value>
+    <value>Red (2)</value>
+  </data>
+  <data name="SilverMultiplierBand" xml:space="preserve">
+    <value>Silver (0,01 Ω)</value>
+  </data>
+  <data name="VioletBand" xml:space="preserve">
+    <value>Violet (7)</value>
+  </data>
+  <data name="WhiteBand" xml:space="preserve">
+    <value>White (9)</value>
+  </data>
+  <data name="YellowBand" xml:space="preserve">
+    <value>Yellow (4)</value>
+  </data>
+  <data name="GoldToleranceBand" xml:space="preserve">
+    <value>Gold (± 5%)</value>
+  </data>
+  <data name="SilverToleranceBand" xml:space="preserve">
+    <value>Silver (± 10%)</value>
+  </data>
+  <data name="BlackMultiplierBand" xml:space="preserve">
+    <value>Black (1 Ω)</value>
+  </data>
+  <data name="BlueMultiplierBand" xml:space="preserve">
+    <value>Blue (1 MΩ)</value>
+  </data>
+  <data name="BlueToleranceBand" xml:space="preserve">
+    <value>Blue (± 0.25%)</value>
+  </data>
+  <data name="BrownMultiplierBand" xml:space="preserve">
+    <value>Brown (10 Ω)</value>
+  </data>
+  <data name="BrownToleranceBand" xml:space="preserve">
+    <value>Brown (± 1%)</value>
+  </data>
+  <data name="GreenMultiplierBand" xml:space="preserve">
+    <value>Green (100 KΩ)</value>
+  </data>
+  <data name="GreenToleranceBand" xml:space="preserve">
+    <value>Green (± 0.5%)</value>
+  </data>
+  <data name="OrangeMultiplierBand" xml:space="preserve">
+    <value>Orange (1 KΩ)</value>
+  </data>
+  <data name="RedMultiplierBand" xml:space="preserve">
+    <value>Red (100 Ω)</value>
+  </data>
+  <data name="RedToleranceBand" xml:space="preserve">
+    <value>Red (± 2%)</value>
+  </data>
+  <data name="VioletMultiplierBand" xml:space="preserve">
+    <value>Violet (10 MΩ)</value>
+  </data>
+  <data name="VioletToleranceBand" xml:space="preserve">
+    <value>Violet (± 0.1%)</value>
+  </data>
+  <data name="YellowMultiplierBand" xml:space="preserve">
+    <value>Yellow (10 KΩ)</value>
   </data>
 </root>

@@ -1,0 +1,78 @@
+﻿<div id="resistor-content">
+	<div class="part1"></div>
+	<div class="part2">
+		<div id="firstBand" class="band @Hovered(ResistorBandRegionEnum.FirstBand)" style="background: @FirstBandColor; box-shadow: @FirstBandColor 0px 0px 5px;"> </div>
+	</div>
+	<div id="part3">
+		<div class="band @Hovered(ResistorBandRegionEnum.SecondBand)" style="background: @SecondBandColor; box-shadow: @SecondBandColor 0px 0px 5px;"></div>
+		<div class="band @Hovered(ResistorBandRegionEnum.ThirdBand)" style="background: @MultiplierBandColor; box-shadow: @MultiplierBandColor 0px 0px 5px;"></div>
+		<div class="band" style="background: #216481; box-shadow: #216481 0px 0px 5px;"></div>
+		<div class="band" style="background: #216481; box-shadow: #216481 0px 0px 5px;"></div>
+	</div>
+	<div class="part2">
+		<div class="band @Hovered(ResistorBandRegionEnum.FourthBand)" style="background: @ToleranceBandColor; box-shadow: @ToleranceBandColor 0px 0px 5px;"></div>
+	</div>
+	<div class="part1"></div>
+</div>
+@if (ResistorValue != 0)
+{
+	<div class="py-2">
+		<ResistorResultComponent
+			Value="@ResistorValue"
+			Disclaimer="@ResistorDisclaimer" />
+	</div>
+}
+
+@code {
+	/// <summary>
+	/// First band color.
+	/// </summary>
+	[Parameter]
+	public string FirstBandColor { get; set; } = "cyan";
+
+	/// <summary>
+	/// Second band color.
+	/// </summary>
+	[Parameter]
+	public string SecondBandColor { get; set; } = "cyan";
+
+	/// <summary>
+	/// Multiplier color.
+	/// </summary>
+	[Parameter]
+	public string MultiplierBandColor { get; set; } = "cyan";
+
+	/// <summary>
+	/// Tolerance color.
+	/// </summary>
+	[Parameter]
+	public string ToleranceBandColor { get; set; } = "cyan";
+
+	/// <summary>
+	/// The calculated resistor value.
+	/// </summary>
+	[Parameter]
+	public double ResistorValue { get; set; } = 0;
+
+	/// <summary>
+	/// Resistor value disclaimer.
+	/// </summary>
+	[Parameter]
+	public string? ResistorDisclaimer { get; set; }
+
+	/// <summary>
+	/// Indicates which band region is hovered.
+	/// </summary>
+	[Parameter]
+	public ResistorBandRegionEnum Hover { get; set; } = ResistorBandRegionEnum.Unspecified;
+
+	/// <summary>
+	/// Return the hover effect for the selected band.
+	/// </summary>
+	/// <param name="region">Region hovered</param>
+	/// <returns>Fade effect class</returns>
+	private string Hovered(ResistorBandRegionEnum region)
+	{
+		return Hover == region ? "fadeBand" : "";
+	}
+}

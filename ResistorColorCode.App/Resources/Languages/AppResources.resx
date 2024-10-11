@@ -123,6 +123,18 @@
   <data name="Black" xml:space="preserve">
     <value>Black</value>
   </data>
+  <data name="FifthBand" xml:space="preserve">
+    <value>5th Band</value>
+  </data>
+  <data name="FiveBandResistorType" xml:space="preserve">
+    <value>5 Bands</value>
+  </data>
+  <data name="FourBandResistorType" xml:space="preserve">
+    <value>4 Bands</value>
+  </data>
+  <data name="FourthBand" xml:space="preserve">
+    <value>4th Band</value>
+  </data>
   <data name="HeaderTitle" xml:space="preserve">
     <value>Resistor Calculator</value>
   </data>
@@ -133,30 +145,36 @@
     <value>Red</value>
   </data>
   <data name="ResistorBandReading" xml:space="preserve">
-    <value>A leitura do resistor deve ser feita direito porra</value>
+    <value>You read resistor bands beginning with the end that has the most bands.</value>
   </data>
   <data name="ResistorFirstBand" xml:space="preserve">
-    <value>First band</value>
+    <value>1st Band</value>
   </data>
   <data name="ResistorFourthBand" xml:space="preserve">
     <value>Fourth band</value>
   </data>
   <data name="ResistorHeaderDescription" xml:space="preserve">
-    <value>Fill the colors of the resistor bands</value>
+    <value>Fill the colors of the resistor bands.</value>
   </data>
   <data name="ResistorMultiplierBand" xml:space="preserve">
-    <value>Multiplier band</value>
+    <value>Multiplier</value>
+  </data>
+  <data name="ResistorPPMBand" xml:space="preserve">
+    <value>PPM (6th Band)</value>
   </data>
   <data name="ResistorSecondBand" xml:space="preserve">
-    <value>Second band</value>
-  </data>
-  <data name="ResistorTemperatureBand" xml:space="preserve">
-    <value>Temperature coeficient</value>
+    <value>2nd Band</value>
   </data>
   <data name="ResistorThirdBand" xml:space="preserve">
-    <value>Third band</value>
+    <value>3rd Band</value>
   </data>
   <data name="ResistorToleranceBand" xml:space="preserve">
-    <value>Rolerance band</value>
+    <value>Tolerance</value>
+  </data>
+  <data name="SixBandResistorType" xml:space="preserve">
+    <value>6 Bands</value>
+  </data>
+  <data name="ThirdBand" xml:space="preserve">
+    <value>3rd Band</value>
   </data>
 </root>

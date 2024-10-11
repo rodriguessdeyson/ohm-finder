@@ -118,18 +118,63 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AppName" xml:space="preserve">
-    <value>Resistor Color Code</value>
+    <value>Código de Cores de Resistor</value>
   </data>
   <data name="Black" xml:space="preserve">
     <value>Preto</value>
+  </data>
+  <data name="FifthBand" xml:space="preserve">
+    <value>(5ª faixa)</value>
+  </data>
+  <data name="FiveBandResistorType" xml:space="preserve">
+    <value>5 faixas</value>
+  </data>
+  <data name="FourBandResistorType" xml:space="preserve">
+    <value>4 faixas</value>
+  </data>
+  <data name="FourthBand" xml:space="preserve">
+    <value>(4ª faixa)</value>
+  </data>
+  <data name="HeaderTitle" xml:space="preserve">
+    <value>Calculadora de Resistor</value>
+  </data>
+  <data name="HomeHeaderDescription" xml:space="preserve">
+    <value>Escolha o modelo do resistor com base no número de faixas</value>
   </data>
   <data name="Red" xml:space="preserve">
     <value>Vermelho</value>
   </data>
   <data name="ResistorBandReading" xml:space="preserve">
-    <value>A leitura do resistor deve ser feita direito porra</value>
+    <value>Você lê as faixas de resistores começando pela extremidade que tem mais faixas.</value>
+  </data>
+  <data name="ResistorFirstBand" xml:space="preserve">
+    <value>Primeiro dígito (1ª faixa)</value>
+  </data>
+  <data name="ResistorFourthBand" xml:space="preserve">
+    <value>Quarto dígito (4ª faixa)</value>
   </data>
   <data name="ResistorHeaderDescription" xml:space="preserve">
-    <value>Fill the colors of the resistor bands</value>
+    <value>Preencha as cores das bandas do resistor.</value>
+  </data>
+  <data name="ResistorMultiplierBand" xml:space="preserve">
+    <value>Multiplicador</value>
+  </data>
+  <data name="ResistorPPMBand" xml:space="preserve">
+    <value>PPM (6ª faixa)</value>
+  </data>
+  <data name="ResistorSecondBand" xml:space="preserve">
+    <value>Segundo dígito (2ª faixa)</value>
+  </data>
+  <data name="ResistorThirdBand" xml:space="preserve">
+    <value>Terceiro dígito (3ª faixa)</value>
+  </data>
+  <data name="ResistorToleranceBand" xml:space="preserve">
+    <value>Tolerância</value>
+  </data>
+  <data name="SixBandResistorType" xml:space="preserve">
+    <value>6 faixas</value>
+  </data>
+  <data name="ThirdBand" xml:space="preserve">
+    <value>(3ª faixa)</value>
   </data>
 </root>

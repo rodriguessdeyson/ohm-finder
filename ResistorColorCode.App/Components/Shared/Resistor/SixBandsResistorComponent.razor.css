@@ -7,27 +7,13 @@
     text-decoration: none;
 }
 
-#resistor-module {
-    grid-area: resistor-module;
-    background-color: #cecece;
-    background: url("https://assets.codepen.io/1179484/j.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    overflow: hidden;
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    box-shadow: inset 7px 3px 5px rgb(33 101 129 / 59%);
-}
-
 #resistor-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: fit-content;
     position: relative;
-    top: 22px;
-    left: 189px;
+    animation: fadeIn 1s
 }
 
 .part1, .part2, #part3 {
@@ -60,6 +46,42 @@
     margin-top: 6px;
 }
 
+.fadeBand {
+    opacity: 1;
+    -webkit-animation: fadeinout 2s infinite;
+    animation: fadeinout 2s infinite;
+}
+
+@-webkit-keyframes fadeinout {
+    0%,100% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeinout {
+    0%,100% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 9;
+    }
+}
+
 @media only screen and (max-width: 1300px) {
     #resistor-module {
         grid-area: resistor-module;
@@ -75,10 +97,6 @@
 }
 
 @media only screen and (max-width: 500px) {
-    body {
-        overflow: visible;
-    }
-
     #resistor-module {
         grid-area: resistor-module;
         background-color: #cecece;
@@ -90,35 +108,6 @@
     }
 
     #resistor-content {
-        width: fit-content;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        top: 130px;
-        left: 19px;
-    }
-
-    .part1 {
-        height: 2px;
-        width: 12px;
-    }
-
-    .part2 {
-        height: 25px;
-        width: 20px;
-        display: flex;
-    }
-
-    #part3 {
-        height: 14px;
-        width: 35px;
-        display: flex;
-    }
-
-    .band {
-        width: 3px;
-        height: 100%;
-        margin-top: 0;
-        margin-left: 5px;
+        transform: rotate(-90deg)
     }
 }

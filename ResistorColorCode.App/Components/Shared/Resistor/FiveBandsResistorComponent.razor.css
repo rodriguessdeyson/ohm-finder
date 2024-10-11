@@ -43,24 +43,33 @@
     height: 3px;
     background: cyan;
     box-shadow: 0px 0px 5px cyan;
-    margin-top: 8px;
+    margin-top: 7px;
 }
 
-.band2 {
-    height: 3px;
-    background: cyan;
-    box-shadow: 0px 0px 5px cyan;
-    margin-top: 5px;
+.fadeBand {
+    opacity: 1;
+    -webkit-animation: fadeinout 2s infinite;
+    animation: fadeinout 2s infinite;
 }
 
 
-@keyframes spin {
-    from {
-        transform: rotate(0deg);
+@-webkit-keyframes fadeinout {
+    0%,100% {
+        opacity: 0;
     }
 
-    to {
-        transform: rotate(360deg);
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeinout {
+    0%,100% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
     }
 }
 
@@ -74,42 +83,8 @@
     }
 }
 
-@keyframes fadeOut {
-    from {
-        opacity: 9;
-    }
-
-    to {
-        opacity: 0;
-    }
-}
-
-@keyframes textShadow {
-    from {
-        text-shadow: 0px 0px 15px #88e4ff;
-    }
-
-    to {
-        text-shadow: 0px 0px 2px cyan;
-        color: cyan;
-    }
-}
-
-@media only screen and (max-width: 1300px) {
-    #resistor-module {
-        grid-area: resistor-module;
-        background-color: #cecece;
-        background-repeat: no-repeat;
-        overflow: hidden;
-        display: grid;
-        align-items: center;
-        padding-left: 70px;
-        padding-top: 30px;
-        justify-content: left;
-    }
-}
-
 @media only screen and (max-width: 500px) {
+
     #resistor-content {
         transform: rotate(-90deg)
     }
