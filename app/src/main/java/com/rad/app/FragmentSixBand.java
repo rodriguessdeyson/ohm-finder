@@ -2,7 +2,6 @@ package com.rad.app;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,24 +9,15 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.webkit.WebView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import com.google.android.gms.ads.AdError;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.FullScreenContentCallback;
-import com.google.android.gms.ads.LoadAdError;
-import com.google.android.gms.ads.interstitial.InterstitialAd;
-import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 import com.google.android.material.textfield.MaterialAutoCompleteTextView;
-import com.rad.services.ad.AdService;
 import com.rad.services.resistor.ResistorService;
 import com.rad.models.Resistor;
 import com.rad.models.types.ResistorType;
-import com.rad.resistorcolorcode.BuildConfig;
 import com.rad.resistorcolorcode.R;
 import com.rad.resistorcolorcode.databinding.FragmentSixBandsBinding;
 import com.rad.services.adapters.BandSelectAdapter;
@@ -38,14 +28,6 @@ import java.util.ArrayList;
 
 public class FragmentSixBand extends Fragment
 {
-    private static final String adMobAppId = BuildConfig.NEW_RESISTOR_ADMOB_ID;
-    private static final String TAG = "FragmentSixBand";
-
-    /**
-     * InterstitialAd reference.
-     */
-    private InterstitialAd resistorInterstitialAd;
-
     /**
      * The first band color.
      */
@@ -102,11 +84,6 @@ public class FragmentSixBand extends Fragment
     private BandService bandService;
 
     /**
-     * The ad services.
-     */
-    private AdService adServices;
-
-    /**
      * The resistor services.
      */
     private ResistorService resistorService;
@@ -125,27 +102,6 @@ public class FragmentSixBand extends Fragment
     public void onCreate(@Nullable Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        
-        adServices = new AdService(getContext());
-        AdRequest adRequest = new AdRequest.Builder().build();
-        InterstitialAd.load(requireContext(), adMobAppId, adRequest,
-            new InterstitialAdLoadCallback()
-            {
-                @Override
-                public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
-                    // The mInterstitialAd reference will be null until
-                    // an ad is loaded.
-                    resistorInterstitialAd = interstitialAd;
-                    Log.i(TAG, "onAdLoaded");
-                }
-                
-                @Override
-                public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
-                    // Handle the error
-                    Log.d(TAG, loadAdError.toString());
-                    resistorInterstitialAd = null;
-                }
-            });
     }
 
     @Override
@@ -205,15 +161,6 @@ public class FragmentSixBand extends Fragment
     }
 
     @Override
-    public void onResume()
-    {
-        super.onResume();
-        
-        // Reload AdRequest.
-        reloadAdRequest();
-    }
-
-    @Override
     public void onDestroyView()
     {
         super.onDestroyView();
@@ -259,7 +206,7 @@ public class FragmentSixBand extends Fragment
         {
             firstBand = significantBandConfiguration.get(position);
             updateResistorBandColor((String)colorDropdown.getTag(), firstBand.getColor());
-            showAdIfAvailable();
+            calculateResistorValue();
         });
 
         colorDropdown.setOnFocusChangeListener(OnFocusChangeListener);
@@ -275,7 +222,7 @@ public class FragmentSixBand extends Fragment
         colorDropdown.setOnItemClickListener((parent, view, position, id) -> {
             secondBand = significantBandConfiguration.get(position);
             updateResistorBandColor((String)colorDropdown.getTag(), secondBand.getColor());
-            showAdIfAvailable();
+            calculateResistorValue();
         });
 
         colorDropdown.setOnFocusChangeListener(OnFocusChangeListener);
@@ -291,7 +238,7 @@ public class FragmentSixBand extends Fragment
         colorDropdown.setOnItemClickListener((parent, view, position, id) -> {
             thirdBand = significantBandConfiguration.get(position);
             updateResistorBandColor((String)colorDropdown.getTag(), thirdBand.getColor());
-            showAdIfAvailable();
+            calculateResistorValue();
         });
 
         colorDropdown.setOnFocusChangeListener(OnFocusChangeListener);
@@ -307,7 +254,7 @@ public class FragmentSixBand extends Fragment
         colorDropdown.setOnItemClickListener((parent, view, position, id) -> {
             multiplierBand = multiplierBandConfiguration.get(position);
             updateResistorBandColor((String)colorDropdown.getTag(), multiplierBand.getColor());
-            showAdIfAvailable();
+            calculateResistorValue();
         });
 
         colorDropdown.setOnFocusChangeListener(OnFocusChangeListener);
@@ -323,7 +270,7 @@ public class FragmentSixBand extends Fragment
         colorDropdown.setOnItemClickListener((parent, view, position, id) -> {
             toleranceBand = toleranceBandConfiguration.get(position);
             updateResistorBandColor((String)colorDropdown.getTag(), toleranceBand.getColor());
-            showAdIfAvailable();
+            calculateResistorValue();
         });
 
         colorDropdown.setOnFocusChangeListener(OnFocusChangeListener);
@@ -339,7 +286,7 @@ public class FragmentSixBand extends Fragment
         colorDropdown.setOnItemClickListener((parent, view, position, id) -> {
             ppmBand = ppmBandConfiguration.get(position);
             updateResistorBandColor((String)colorDropdown.getTag(), ppmBand.getColor());
-            showAdIfAvailable();
+            calculateResistorValue();
         });
 
         colorDropdown.setOnFocusChangeListener(OnFocusChangeListener);
@@ -407,40 +354,6 @@ public class FragmentSixBand extends Fragment
             .evaluateJavascript(String.format("updateBandColor('%s', '%s')", bandName, hexColor), null);
     }
 
-    private void showAdIfAvailable()
-    {
-        try
-        {
-            if (resistorInterstitialAd == null || adServices.canShowAd(600000))
-            {
-                calculateResistorValue();
-                return;
-            }
-            
-            resistorInterstitialAd.show(requireActivity());
-            resistorInterstitialAd.setFullScreenContentCallback(new FullScreenContentCallback()
-            {
-                @Override
-                public void onAdDismissedFullScreenContent() {
-                    adServices.updateLastAdShown();
-                    resistorInterstitialAd = null;
-                    calculateResistorValue();
-                }
-                
-                @Override
-                public void onAdFailedToShowFullScreenContent(AdError adError) {
-                    resistorInterstitialAd = null;
-                    calculateResistorValue();
-                }
-            });
-        }
-        catch (Exception e)
-        {
-            Toast.makeText(getContext(), e.getMessage(), Toast.LENGTH_LONG).show();
-        }
-        
-    }
-
     private void calculateResistorValue()
     {
         boolean canCalculate =
@@ -494,28 +407,5 @@ public class FragmentSixBand extends Fragment
             
             resistorService.create(resistor);
         }
-    }
-    
-    private void reloadAdRequest()
-    {
-        AdRequest adRequest = new AdRequest.Builder().build();
-        InterstitialAd.load(requireContext(), adMobAppId, adRequest,
-            new InterstitialAdLoadCallback()
-            {
-                @Override
-                public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
-                    // The mInterstitialAd reference will be null until
-                    // an ad is loaded.
-                    resistorInterstitialAd = interstitialAd;
-                    Log.i(TAG, "onAdLoaded");
-                }
-                
-                @Override
-                public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
-                    // Handle the error
-                    Log.d(TAG, loadAdError.toString());
-                    resistorInterstitialAd = null;
-                }
-            });
     }
 }

@@ -51,14 +51,6 @@ public class DBContext
         sqliteDatabase = context
                 .openOrCreateDatabase(DATABASE_NAME, Context.MODE_PRIVATE, null);
 
-        // Create a table to manipulate add show.
-        String adTable =
-            "CREATE TABLE IF NOT EXISTS Ad(" +
-            "Id             INTEGER PRIMARY KEY AUTOINCREMENT," +
-            "ShowedTime     TEXT NOT NULL)";
-
-        sqliteDatabase.execSQL(adTable);
-
         String resistorHistoryTable =
             "CREATE TABLE IF NOT EXISTS ResistorHistory(" +
                 "Id             INTEGER PRIMARY KEY AUTOINCREMENT," +

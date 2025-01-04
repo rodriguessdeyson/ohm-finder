@@ -84,19 +84,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/IncludeFiveBand" />
 
-        <com.google.android.gms.ads.AdView
-            android:id="@+id/banner_ad_view1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:adSize="BANNER"
-            app:adUnitId="ca-app-pub-4749632185565734/9071570655"
-            app:layout_constraintBottom_toTopOf="@+id/flow1"
-            android:layout_marginTop="10dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/LinearLayoutHeader" />
-
         <androidx.constraintlayout.helper.widget.Flow
             android:id="@+id/flow1"
             android:layout_width="0dp"
@@ -110,20 +97,7 @@
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/banner_ad_view1" />
-
-        <com.google.android.gms.ads.AdView
-            android:id="@+id/banner_ad_view2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:adSize="BANNER"
-            android:layout_marginTop="10dp"
-            app:adUnitId="ca-app-pub-4749632185565734/3471759617"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/flow1" />
+            app:layout_constraintTop_toBottomOf="@id/LinearLayoutHeader" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>

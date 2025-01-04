@@ -62,10 +62,6 @@ public class HelpBottomSheetDialog extends BottomSheetDialogFragment implements 
     {
         View v = inflater.inflate(R.layout.layout_bottom_sheet_resistor_help, container, false);
         
-        AdView adView = v.findViewById(R.id.banner_ad_view);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        adView.loadAd(adRequest);
-        
         TextView title = v.findViewById(R.id.TextViewHelpTitle);
         
         title.setText(this.requireContext().getString(R.string.four_band_resistor_model));
@@ -89,10 +85,6 @@ public class HelpBottomSheetDialog extends BottomSheetDialogFragment implements 
     {
         View v = inflater.inflate(R.layout.layout_bottom_sheet_resistor_help, container, false);
         
-        AdView adView = v.findViewById(R.id.banner_ad_view);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        adView.loadAd(adRequest);
-        
         TextView title = v.findViewById(R.id.TextViewHelpTitle);
         title.setText(this.requireContext().getResources().getString(R.string.five_band_resistor_model));
 
@@ -113,10 +105,6 @@ public class HelpBottomSheetDialog extends BottomSheetDialogFragment implements 
     private View sixBandHelpView(LayoutInflater inflater, @Nullable ViewGroup container)
     {
         View v = inflater.inflate(R.layout.layout_bottom_sheet_resistor_help, container, false);
-        
-        AdView adView = v.findViewById(R.id.banner_ad_view);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        adView.loadAd(adRequest);
         
         TextView title = v.findViewById(R.id.TextViewHelpTitle);
         title.setText(this.requireContext().getResources().getString(R.string.six_band_resistor_model));
@@ -139,10 +127,6 @@ public class HelpBottomSheetDialog extends BottomSheetDialogFragment implements 
     private View helpView(LayoutInflater inflater, @Nullable ViewGroup container)
     {
         View v = inflater.inflate(R.layout.layout_bottom_sheet_help, container, false);
-
-        AdView adView = v.findViewById(R.id.banner_ad_view);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        adView.loadAd(adRequest);
 
         TextView title = v.findViewById(R.id.TextViewHelpTitle);
         title.setText(this.requireContext().getResources().getString(R.string.help_title));

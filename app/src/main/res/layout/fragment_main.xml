@@ -64,19 +64,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/LinearLayoutHeader" />
 
-        <com.google.android.gms.ads.AdView
-            android:id="@+id/banner_ad_view1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_weight="1"
-            app:adSize="BANNER"
-            app:adUnitId="ca-app-pub-4749632185565734/9071570655"
-            app:layout_constraintBottom_toTopOf="@id/IncludeFiveBand"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/IncludeFourBand" />
-
         <include
             android:id="@+id/IncludeFiveBand"
             layout="@layout/layout_five_bands_resistor_menu"
@@ -85,20 +72,7 @@
             android:layout_marginTop="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/banner_ad_view1" />
-
-        <com.google.android.gms.ads.AdView
-            android:id="@+id/banner_ad_view2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_weight="1"
-            app:adSize="BANNER"
-            app:adUnitId="ca-app-pub-4749632185565734/3471759617"
-            app:layout_constraintBottom_toTopOf="@id/IncludeSixBand"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/IncludeFiveBand" />
+            app:layout_constraintTop_toBottomOf="@+id/IncludeFourBand" />
 
         <include
             android:id="@+id/IncludeSixBand"
@@ -109,7 +83,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/banner_ad_view2" />
+            app:layout_constraintTop_toBottomOf="@+id/IncludeFiveBand" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>
