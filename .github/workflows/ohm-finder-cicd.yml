@@ -1,0 +1,132 @@
+name: ohm-finder-ci-cd
+
+on:
+  push:
+    branches:
+      - main
+
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  start:
+    name: Set up
+    runs-on: ubuntu-24.04
+
+    steps:
+      - name: Run sample script
+        run: echo "Hello, world"
+
+  lint-unit-test:
+    name: Perform lint check and unit test
+    needs: [start]
+    runs-on: ubuntu-24.04
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Cache Gradle dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.gradle/caches
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+          restore-keys: |
+            ${{ runner.os }}-gradle-
+
+      - name: Make Gradlew executable
+        run: chmod +x ./gradlew
+
+      - name: Run lint
+        run: ./gradlew lintDebug --stacktrace
+
+      - name: Upload HTML lint report
+        uses: actions/upload-artifact@v4
+        with:
+          name: lint-report.html
+          path: app/build/reports/lint-results-debug.html
+
+      - name: Run unit tests
+        run: ./gradlew test --stacktrace
+
+      - name: Upload test report
+        uses: actions/upload-artifact@v4
+        with:
+          name: unit-test-report
+          path: app/build/reports/tests/testDebugUnitTest/
+
+  debug-apk:
+    name: Generate Debug APK
+    needs: [lint-unit-test]
+    runs-on: ubuntu-24.04
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Make Gradlew executable
+        run: chmod +x ./gradlew
+
+      - name: Build debug APK
+        run: ./gradlew assembleDebug --stacktrace
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: debug-app.apk
+          path: app/build/outputs/apk/debug/app-debug.apk
+
+  release-apk:
+    name: Build Release Signed APK
+    needs: [debug-apk]
+    runs-on: ubuntu-24.04
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Make Gradlew executable
+        run: chmod +x ./gradlew
+
+      - name: Build Release APK
+        run: ./gradlew assembleRelease --stacktrace
+
+      - name: Sign APK
+        uses: ilharp/sign-android-release@v1
+        id: sign_app
+        with:
+          releaseDir: app/build/outputs/apk/release
+          signingKey: ${{ secrets.ANDROID_SIGNING_KEY }}
+          keyAlias: ${{ secrets.ANDROID_KEY_ALIAS }}
+          keyStorePassword: ${{ secrets.ANDROID_STORE_PASSWORD }}
+          keyPassword: ${{ secrets.ANDROID_KEY_PASSWORD }}
+          buildToolsVersion: "34.0.0"
+
+      - name: List APK files
+        run: ls -la app/build/outputs/apk/release
+
+      - name: Upload Signed APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-app.apk
+          path: app/build/outputs/apk/release/*.apk
