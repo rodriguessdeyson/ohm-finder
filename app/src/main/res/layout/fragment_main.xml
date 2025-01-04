@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.rad.app.MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/LinearLayoutHeader"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:cardBackgroundColor="@color/md_theme_tertiaryContainer"
+            app:layout_constraintBottom_toTopOf="@+id/IncludeFourBand"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="@color/md_theme_tertiaryContainer">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/drawable_lightbulb"
+                    android:tint="@color/md_theme_onTertiaryContainer">
+
+                </com.google.android.material.imageview.ShapeableImageView>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/TextViewHeaderSubTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="end"
+                    android:padding="16dp"
+                    android:text="@string/tip_resistor_model"
+                    android:textColor="@color/md_theme_onTertiaryContainer"
+                    android:textSize="14sp">
+
+                </com.google.android.material.textview.MaterialTextView>
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <include
+            android:id="@+id/IncludeFourBand"
+            layout="@layout/layout_four_bands_resistor_menu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/LinearLayoutHeader" />
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/banner_ad_view1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            app:adSize="BANNER"
+            app:adUnitId="ca-app-pub-4749632185565734/9071570655"
+            app:layout_constraintBottom_toTopOf="@id/IncludeFiveBand"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/IncludeFourBand" />
+
+        <include
+            android:id="@+id/IncludeFiveBand"
+            layout="@layout/layout_five_bands_resistor_menu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/banner_ad_view1" />
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/banner_ad_view2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            app:adSize="BANNER"
+            app:adUnitId="ca-app-pub-4749632185565734/3471759617"
+            app:layout_constraintBottom_toTopOf="@id/IncludeSixBand"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/IncludeFiveBand" />
+
+        <include
+            android:id="@+id/IncludeSixBand"
+            layout="@layout/layout_six_bands_resistor_menu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/banner_ad_view2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

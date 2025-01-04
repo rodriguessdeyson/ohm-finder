@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ohm Finder</string>
+    <string name="title_activity_main">Ohm Finder</string>
+    <string name="action_settings">Configuración</string>
+
+    <!-- Strings used for Menu -->
+    <string name="menu_help">Ayuda</string>
+    <string name="menu_history">Valores previos</string>
+    <string name="menu_support">Soporte</string>
+
+    <!-- Strings used for first for navigation Section-->
+    <string name="first_fragment_label">Ohm Finder</string>
+
+    <!-- Strings used for second for navigation Section-->
+    <string name="second_fragment_label">4 Bandas</string>
+    <string name="four_band_resistor_model">Resistor de 4 Bandas</string>
+    <string name="four_band_resistor_model_tip">2 dígitos significativos, 1 multiplicador y 1 tolerancia</string>
+
+    <!-- Strings used for third for navigation Section-->
+    <string name="third_fragment_label">5 Bandas</string>
+    <string name="five_band_resistor_model">Resistor de 5 Bandas</string>
+    <string name="five_band_resistor_model_tip">3 dígitos significativos, 1 multiplicador y 1 tolerancia</string>
+
+    <!-- Strings used for fourth for navigation Section-->
+    <string name="fourth_fragment_label">6 Bandas</string>
+    <string name="six_band_resistor_model">Resistor de 6 Bandas</string>
+    <string name="six_band_resistor_model_tip">3 dígitos significativos, 1 multiplicador y 2 tolerancias</string>
+
+    <!-- Strings used for results Section-->
+    <string name="output_title">Salida</string>
+    <string name="resistor_value">Valor del resistor:</string>
+    <string name="resistor_wvalue">Valor del resistor: %1$s </string>
+    <string name="resistor_tolerance_value">Tolerancia: ±%1$s</string>
+    <string name="resistor_value_range">Rango: %1$s ~ %2$s</string>
+    <string name="resistor_ppm_value">PPM: %1$s</string>
+
+    <!-- Strings used for band colors Section-->
+    <string name="black_band">Negro</string>
+    <string name="brown_band">Marrón</string>
+    <string name="red_band">Rojo</string>
+    <string name="orange_band">Naranja</string>
+    <string name="yellow_band">Amarillo</string>
+    <string name="green_band">Verde</string>
+    <string name="blue_band">Azul</string>
+    <string name="violet_band">Violeta</string>
+    <string name="grey_band">Gris</string>
+    <string name="white_band">Blanco</string>
+    <string name="gold_band">Oro</string>
+    <string name="silver_band">Plata</string>
+
+    <!-- General and tips Section -->
+    <string name="resistor_parameters_title">Parámetros del resistor</string>
+    <string name="resistor_parameters_subtitle">Seleccione los colores para determinar el valor y la tolerancia del resistor</string>
+    <string name="tip_resistor_reading">Lea las bandas del resistor comenzando por el extremo con más bandas.</string>
+    <string name="tip_resistor_model">Elija el modelo de resistor según el número de bandas</string>
+    <string name="first_band_hint">Color de la primera banda</string>
+    <string name="second_band_hint">Color de la segunda banda</string>
+    <string name="multiplier_band_hint">Color de la banda multiplicadora</string>
+    <string name="tolerance_band_hint">Color de la banda de tolerancia</string>
+    <string name="third_band_hint">Color de la tercera banda</string>
+    <string name="ppm_band_hint">PPM</string>
+    <string name="button_go">Ir</string>
+    <string name="resistor_delete_dialog_title">¿Eliminar resistor?</string>
+    <string name="resistor_delete_dialog_message">Esta acción no se puede deshacer.</string>
+    <string name="resistor_delete_dialog_yes">Eliminar</string>
+    <string name="resistor_delete_dialog_no">Cancelar</string>
+    <string name="resistor_deleted">Resistor eliminado</string>
+    <string name="resistor_not_deleted">Resistor no eliminado</string>
+    <string name="resistor_created_at">Creado en: %1$s</string>
+    <string name="resistor_history">Resistores previos</string>
+    <string name="resistor_history_empty">No hay resistores previos</string>
+    <string name="resistor_history_size">%1$d de %2$d elementos</string>
+    <string name="button_reset_description">Reiniciar todos los campos</string>
+
+    <!-- Help Section -->
+    <string name="help_title">Ayuda</string>
+    <string name="help_introduction">
+    <Data>
+        <![CDATA[
+            ¡La aplicación <b><font color="#CC8D46">Ohm Finder</font></b> es tu compañera para trabajar con resistencias! Ya seas estudiante, ingeniero o un entusiasta de la electrónica DIY,
+            <b>Ohm Finder</b> simplifica la decodificación de los códigos de colores de las resistencias, dándote valores precisos de resistencia en solo segundos.
+
+            <br/><br/><b><font color="#CC8D46">¿Qué es una Resistencia?</font></b>
+            <br/><br/>Una resistencia es un componente eléctrico esencial que restringe el flujo de corriente eléctrica en un circuito.
+            Juega un papel vital en el control de niveles de voltaje y corriente, protegiendo componentes sensibles y dividiendo voltajes.
+            Las resistencias están codificadas con bandas de colores siguiendo estándares internacionales, como la norma <b>IEC 60062:2016</b>, que permite identificar fácilmente sus valores de resistencia y tolerancias sin usar herramientas de medición.
+            <br/><br/>Las bandas de color representan cifras significativas, un multiplicador y la tolerancia. En algunos casos, bandas adicionales especifican confiabilidad o coeficiente de temperatura.
+            Este sistema de codificación es indispensable para garantizar la correcta aplicación de las resistencias en circuitos electrónicos.
+
+            <br/><br/><b><font color="#CC8D46">Entendiendo el Sistema de Bandas de Color</font></b>
+            <br/><br/>El sistema de código de colores de resistencias usa bandas de colores para indicar el valor de resistencia, la tolerancia y, ocasionalmente, el coeficiente de temperatura de una resistencia.
+            Hay tres principales sistemas de codificación por colores: <b>de 4 bandas</b>, <b>de 5 bandas</b> y <b>de 6 bandas</b>.
+            <br/><br/>Cada sistema utiliza un número específico de bandas de colores, donde cada banda transmite información crítica sobre las características de la resistencia,
+            como el valor de resistencia y la tolerancia. Entender estos códigos es clave para determinar con precisión las especificaciones de la resistencia y asegurar un uso adecuado en circuitos electrónicos.
+
+            <br/><br/>Para leer correctamente estos códigos, sujeta la resistencia de manera que las bandas de colores se visualicen de izquierda a derecha.
+            Una ligera separación entre la tercera banda y la banda de tolerancia suele indicar la dirección correcta de lectura. Aquí tienes un ejemplo para ilustrarlo:
+        ]]>
+    </Data>
+</string>
+    <string name="help_example">
+    <Data>
+        <![CDATA[
+            <br/>1. El <font color="#FF2100">primer</font> (rojo) dígito significativo del valor del componente (lado izquierdo)
+            <br/>2. El <font color="#6967CE">segundo</font> (violeta) dígito significativo (algunas resistencias de precisión tienen un tercer dígito significativo y, por tanto, cinco bandas)
+            <br/>3. El <font color="#528F65">multiplicador</font> decimal (verde) (número de ceros adicionales o multiplicador por potencia de 10)
+            <br/>4. Si está presente, indica la <font color="#C08327">tolerancia</font> (oro) del valor en porcentaje (sin banda significa 20%)
+
+            <br/>Es seguro afirmar que la lectura debería <b><font color="#CC8D46">comenzar desde el extremo que tiene más bandas.</font></b>
+        ]]>
+    </Data>
+</string>
+    <string name="help_color_table">
+    <Data>
+        <![CDATA[
+            <br/><br/><b><font color="#CC8D46">Tabla de códigos de color</font></b>
+            <br/><br/>La norma IEC 60062:2016 proporciona métodos de codificación para el valor de resistencia o capacitancia y su tolerancia,
+            incluyendo codificación por colores para resistencias. También proporciona sistemas de códigos de fecha adecuados para el marcado de pequeños componentes. Los colores son los siguientes:
+        ]]>
+    </Data>
+</string>
+
+    <string name="help_four_band_resistor_introduction">
+    <Data>
+        <![CDATA[
+            La resistencia de cuatro bandas es la variación más común. Estas resistencias tienen dos bandas para el valor de resistencia, un multiplicador y una banda de tolerancia.
+            <br/>Para leer una resistencia de cuatro bandas, busca las bandas de colores en un lado de la resistencia y sigue estos pasos:
+
+            <br/><br/><b><font color="#CC8D46">1. Identifica las bandas y su significado</font></b>
+            <br/><br/><b><font color="#CC8D46">2. Lee las bandas de colores en secuencia</font></b>
+            <br/><br/><b><font color="#CC8D46">3. Decodifica el color de cada banda usando una tabla de colores</font></b>
+            <br/><br/><b><font color="#CC8D46">4. Combina los valores de las dos primeras bandas, multiplícalos por el factor representado por la tercera banda y aplica la tolerancia de la cuarta banda.</font></b>
+            <br/><br/>
+            Ejemplo
+        ]]>
+    </Data>
+</string>
+    <string name="help_four_band_resistor_example">
+    <Data>
+        <![CDATA[
+            En el ejemplo mostrado arriba, las 4 bandas son
+            <font color="#FF2100">rojo</font>,
+            <font color="#6967CE">violeta</font>,
+            <font color="#528F65">verde</font> y
+            <font color="#fab66e">oro</font>. Usando la tabla de códigos de color, se encuentra que <font color="#FF2100">rojo</font> representa 2 y <font color="#6967CE">violeta</font> representa 7.
+            La tercera banda es el multiplicador, con <font color="#528F65">verde</font> representando un valor multiplicador de 6. Por lo tanto, el valor de esta resistencia es 27 * 100k = 2.70 MΩ. La banda de oro significa que la resistencia tiene una tolerancia del 5%.
+            El valor de la resistencia se encuentra, por lo tanto, entre 2.565000 Ω y 2.835000 Ω (2.70M ± 5%).
+            <br/><br/>Si la banda de tolerancia está en blanco, el resultado es una resistencia de 3 bandas. Esto significa que el valor de resistencia sigue siendo el mismo, <font color="#CC8D46">pero la tolerancia es del 20%</font>.
+        ]]>
+    </Data>
+</string>
+    <string name="help_five_band_resistor_introduction">
+    <Data>
+        <![CDATA[
+            Las resistencias de cinco bandas son una variación de las de cuatro bandas, diseñadas para aplicaciones que requieren alta precisión. Estas resistencias incluyen una banda adicional para indicar un tercer dígito significativo, proporcionando mayor precisión.
+            <br/>Para leer una resistencia de cinco bandas, busca las bandas de colores en un lado de la resistencia y sigue estos pasos:
+
+            <br/><br/><b><font color="#CC8D46">1. Identifica el mayor espacio entre la tercera banda y la última banda, que es la banda de tolerancia.</font></b>
+            <br/><br/><b><font color="#CC8D46">2. Comienza desde el lado más cercano a los dígitos significativos y avanza hacia la banda de tolerancia.</font></b>
+            <br/><br/><b><font color="#CC8D46">3. Decodifica el color de cada banda usando una tabla de colores</font></b>
+            <br/><br/><b><font color="#CC8D46">4. Combina los valores de las tres primeras bandas, multiplícalos por el factor representado por la cuarta banda y aplica la tolerancia de la quinta banda.</font></b>
+            <br/><br/>
+            Ejemplo
+        ]]>
+    </Data>
+</string>
+    <string name="help_five_band_resistor_example">
+    <Data>
+        <![CDATA[
+            En el ejemplo mostrado arriba, las 5 bandas son
+            <font color="#FF2100">rojo</font>,
+            <font color="#FF2100">rojo</font>,
+            <font color="#000">negro</font>,
+            <font color="#FF6400">naranja</font> y
+            <font color="#512627">marrón</font>. Usando la tabla de códigos de color, se encuentra que los colores <font color="#FF2100">rojo</font> representan 2.
+            El tercer dígito significativo es <font color="#000">negro</font>, valor de 0. La banda multiplicadora es <font color="#FF6400">naranja</font>. Por lo tanto, el valor de esta resistencia es 220 * 1k = 220 kΩ.
+            La banda <font color="#512627">marrón</font> significa que la resistencia tiene una tolerancia del 1%.
+            El valor de la resistencia se encuentra, por lo tanto, entre 217.800 Ω y 222.200 Ω (220k ± 1%).
+            <br/><br/>Si la banda de tolerancia está en blanco, el resultado es una resistencia de 3 bandas. Esto significa que el valor de resistencia sigue siendo el mismo, <font color="#CC8D46">pero la tolerancia es del 20%</font>.
+        ]]>
+    </Data>
+</string>
+    <string name="help_six_band_resistor_introduction">
+    <Data>
+        <![CDATA[
+            Las resistencias de seis bandas están diseñadas para aplicaciones ultra-precisas y tienen una sexta banda adicional que especifica el coeficiente de temperatura.
+            <br/>Para leer una resistencia de seis bandas, busca las bandas de colores en un lado de la resistencia y sigue estos pasos:
+
+            <br/><br/><b><font color="#CC8D46">1. Identifica el mayor espacio entre la tercera banda y la quinta banda. La quinta banda es la de tolerancia y la sexta banda es el coeficiente de temperatura.</font></b>
+            <br/><br/><b><font color="#CC8D46">2. Comienza desde el lado más cercano a los dígitos significativos y lee hacia las bandas de tolerancia y coeficiente de temperatura.</font></b>
+            <br/><br/><b><font color="#CC8D46">3. Decodifica el color de cada banda usando una tabla de colores</font></b>
+            <br/><br/><b><font color="#CC8D46">4. Combina los valores de las tres primeras bandas, multiplícalos por el factor representado por la cuarta banda y aplica la tolerancia de la quinta banda.</font></b>
+            <br/><br/>
+            Ejemplo
+        ]]>
+    </Data>
+</string>
+    <string name="help_six_band_resistor_example">
+    <Data>
+        <![CDATA[
+            En el ejemplo mostrado arriba, las 6 bandas son
+            <font color="#FF6400">naranja</font>,
+            <font color="#FF6400">naranja</font>,
+            <font color="#000">negro</font>,
+            <font color="#FF6400">naranja</font>,
+            <font color="#fab66e">oro</font> y
+            <font color="#512627">marrón</font>. Usando la tabla de códigos de color, se encuentra que <font color="#FF6400">naranja</font> representa 3 y <font color="#000">negro</font> representa 0.
+            La cuarta banda es el multiplicador, con <font color="#FF6400">naranja</font> representando un valor multiplicador de 3. El <font color="#fab66e">oro</font> es el valor de tolerancia de 5% y el PPM <font color="#512627">marrón</font>, valor de 100 ppm.
+            Por lo tanto, el valor de esta resistencia es 330 * 1k = 330 kΩ.
+            El valor de la resistencia se encuentra, por lo tanto, entre 313.500 Ω y 346.500 Ω (330k ± 5% 100ppm).
+        ]]>
+    </Data>
+</string>
+
+</resources>
