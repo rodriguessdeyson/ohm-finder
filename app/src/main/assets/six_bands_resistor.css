@@ -1,0 +1,111 @@
+body, html {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#resistor-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+  position: relative;
+  animation: fadeIn 1s;
+}
+
+.part1, .part2, #part3 {
+    background: #206783;
+    box-shadow: 0px 0px 5px #206783;
+    overflow: hidden;
+}
+
+.part1 {
+    height: 18px;
+    width: 2px;
+    background: silver;
+}
+
+.part2 {
+    height: 20px;
+    width: 25px;
+    border-radius: 6px;
+}
+
+#part3 {
+    height: 38px;
+    width: 15px;
+}
+
+.band {
+    height: 3px;
+    background: cyan;
+    box-shadow: 0px 0px 5px cyan;
+    margin-top: 6px;
+}
+
+.fadeBand {
+    opacity: 1;
+    -webkit-animation: fadeinout 2s infinite;
+    animation: fadeinout 2s infinite;
+}
+
+@-webkit-keyframes fadeinout {
+    0%,100% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeinout {
+    0%,100% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 9;
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    #resistor-module {
+        grid-area: resistor-module;
+        background-color: #cecece;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        display: grid;
+        align-items: center;
+        padding-left: 70px;
+        padding-top: 30px;
+        justify-content: left;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #resistor-module {
+        grid-area: resistor-module;
+        background-color: #cecece;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        padding-left: 0px;
+        display: grid;
+        justify-content: center;
+    }
+
+    #resistor-content {
+        transform: rotate(-90deg)
+    }
+}
