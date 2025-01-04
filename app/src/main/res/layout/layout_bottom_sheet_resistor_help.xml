@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/LinearLayoutDialog"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/viewContainer"
+            android:layout_width="50dp"
+            android:layout_height="2dp"
+            android:background="@color/md_theme_tertiary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.082" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/TextViewHelpTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:textSize="34sp"
+        android:text="@string/four_band_resistor_model"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/ScrollViewContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:overScrollMode="never"
+        android:layout_marginBottom="5dp"
+        android:padding="4dp">
+
+        <LinearLayout
+            android:id="@+id/LinearLayoutContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/TextViewHelpIntroduction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="viewStart"
+                android:textSize="16sp"
+                android:text="@string/help_four_band_resistor_introduction" />
+
+            <ImageView
+                android:id="@+id/ImageViewHelpImage"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:scaleType="center"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/drawable_four_band_resistor">
+            </ImageView>
+
+            <TextView
+                android:id="@+id/TextViewHelpExample"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="viewStart"
+                android:textSize="16sp"
+                android:text="@string/help_four_band_resistor_example" />
+
+            <TextView
+                android:id="@+id/TextViewHelpColorTable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="viewStart"
+                android:textSize="16sp"
+                android:text="@string/help_color_table" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/LinearLayoutHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                app:cardBackgroundColor="@color/md_theme_tertiaryContainer"
+                app:layout_constraintBottom_toTopOf="@+id/IncludeFourBand"
+                app:strokeColor="@color/md_theme_tertiaryContainer">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp"
+                    android:scaleType="fitCenter"
+                    android:layout_marginTop="5dp"
+                    android:src="@mipmap/color_code_table">
+                </ImageView>
+            </com.google.android.material.card.MaterialCardView>
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

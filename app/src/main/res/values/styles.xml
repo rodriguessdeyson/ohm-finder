@@ -1,0 +1,9 @@
+<resources>
+
+    <!-- Expanded Title Text Appearance for CollapsingToolbarLayout -->
+    <style name="CustomExpandedTitleStyle" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <!-- Customize the text size, color, etc. for expanded title -->
+        <item name="android:textSize">35sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+</resources>

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ohm Finder</string>
+    <string name="title_activity_main">Ohm Finder</string>
+    <string name="action_settings">Configurações</string>
+
+    <!-- Strings used for Menu -->
+    <string name="menu_help">Ajuda</string>
+    <string name="menu_history">Valores anteriores</string>
+    <string name="menu_support">Apoie!</string>
+
+    <!-- Strings used for first for navigation Section-->
+    <string name="first_fragment_label">Ohm Finder</string>
+
+    <!-- Strings used for second for navigation Section-->
+    <string name="second_fragment_label">4 faixas</string>
+    <string name="four_band_resistor_model">Resistor de 4 faixas</string>
+    <string name="four_band_resistor_model_tip">2 dígitos significativos, 1 multiplicador e 1 tolerância</string>
+
+    <!-- Strings used for third for navigation Section-->
+    <string name="third_fragment_label">5 faixas</string>
+    <string name="five_band_resistor_model">Resistor de 5 faixas</string>
+    <string name="five_band_resistor_model_tip">3 dígitos significativos, 1 multiplicador e 1 tolerância</string>
+
+    <!-- Strings used for fourth for navigation Section-->
+    <string name="fourth_fragment_label">6 faixas</string>
+    <string name="six_band_resistor_model">Resistor de 6 faixas</string>
+    <string name="six_band_resistor_model_tip">3 dígitos significativos, 1 multiplicador e 2 tolerâncias</string>
+
+    <!-- Strings used for results Section-->
+    <string name="output_title">Resultado</string>
+    <string name="resistor_value">Valor do resistor:</string>
+    <string name="resistor_wvalue">"Valor do resistor: %1$s "</string>
+    <string name="resistor_tolerance_value">Tolerância: ±%1$s</string>
+    <string name="resistor_value_range">Faixa: %1$s ~ %2$s</string>
+    <string name="resistor_ppm_value">PPM: %1$s</string>
+
+    <!-- Strings used for band colors Section-->
+    <string name="black_band">Preto</string>
+    <string name="brown_band">Marrom</string>
+    <string name="red_band">Vermelho</string>
+    <string name="orange_band">Laranja</string>
+    <string name="yellow_band">Amarelo</string>
+    <string name="green_band">Verde</string>
+    <string name="blue_band">Azul</string>
+    <string name="violet_band">Violeta</string>
+    <string name="grey_band">Cinza</string>
+    <string name="white_band">Branco</string>
+    <string name="gold_band">Ouro</string>
+    <string name="silver_band">Prata</string>
+
+    <!-- General and tips Section-->
+    <string name="resistor_parameters_title">Parâmetros do resistor</string>
+    <string name="resistor_parameters_subtitle">Selecione as cores para determinar o valor e a tolerância do resistor</string>
+    <string name="tip_resistor_reading">Você lê as faixas de resistores começando pela extremidade que tem mais faixas.</string>
+    <string name="tip_resistor_model">Escolha o modelo do resistor com base no número de faixas</string>
+    <string name="first_band_hint">Cor da primeira faixa</string>
+    <string name="second_band_hint">Cor da segunda faixa</string>
+    <string name="multiplier_band_hint">Cor da faixa multiplicadora</string>
+    <string name="tolerance_band_hint">Cor da faixa tolerância</string>
+    <string name="third_band_hint">Cor da terceira faixa</string>
+    <string name="ppm_band_hint">PPM</string>
+    <string name="button_go">Ir</string>
+    <string name="resistor_delete_dialog_title">Excluir resistor?</string>
+    <string name="resistor_delete_dialog_message">Esta ação não pode ser desfeita.</string>
+    <string name="resistor_delete_dialog_yes">Excluir</string>
+    <string name="resistor_delete_dialog_no">Cancelar</string>
+    <string name="resistor_deleted">Resistor excluído</string>
+    <string name="resistor_not_deleted">Resistor não excluído</string>
+    <string name="resistor_created_at">Criado em: %1$s</string>
+    <string name="resistor_history">Resistores anteriores</string>
+    <string name="resistor_history_empty">Nenhum resistor anterior</string>
+    <string name="resistor_history_size">%1$d de %2$d itens</string>
+    <string name="button_reset_description">Reiniciar todos os campos</string>
+
+    <!-- Help Section -->
+    <string name="help_title">Ajuda</string>
+    <string name="help_introduction">
+        <![CDATA[
+                O app <b><font color="#CC8D46">Ohm Finder</font></b> é o seu companheiro definitivo para trabalhar com resistores!
+                Seja você um estudante, engenheiro ou entusiasta de eletrônica, o <b>Ohm Finder</b> simplifica a decodificação de códigos de cores de resistores,
+                fornecendo valores precisos de resistência em segundos.
+
+                <br/><br/><b><font color="#CC8D46">O que é um Resistor?</font></b>
+                <br/><br/>Um resistor é um componente elétrico essencial que restringe o fluxo de corrente elétrica em um circuito.
+                Ele desempenha um papel vital no controle de níveis de tensão e corrente, protegendo componentes sensíveis e dividindo tensões.
+                Os resistores são codificados com faixas coloridas seguindo padrões internacionais, como o <b>IEC 60062:2016</b>, permitindo a identificação fácil de seus valores de resistência e tolerâncias sem a necessidade de medições.
+                <br/><br/>As faixas de cores representam dígitos significativos, um multiplicador e a tolerância.
+                Em alguns casos, faixas adicionais especificam confiabilidade ou coeficiente de temperatura.
+                Esse sistema de codificação é indispensável para garantir a aplicação correta dos resistores em circuitos eletrônicos.
+
+                <br/><br/><b><font color="#CC8D46">Compreendendo o Sistema de Códigos de Cores</font></b>
+                <br/><br/>O sistema de códigos de cores dos resistores utiliza faixas coloridas para indicar o valor da resistência, a tolerância e, ocasionalmente, o coeficiente de temperatura de um resistor.
+                Existem três principais sistemas de codificação de resistores: <b>4 faixas</b>, <b>5 faixas</b> e <b>6 faixas</b>.
+                <br/><br/>Cada sistema utiliza um número específico de faixas coloridas, onde cada faixa fornece informações críticas sobre as características do resistor,
+                como o valor da resistência e a tolerância. Compreender esses códigos é essencial para determinar com precisão as especificações do resistor e garantir o uso correto em circuitos eletrônicos.
+
+                <br/><br/>Para ler esses códigos corretamente, segure o resistor de forma que as faixas de cores sejam visualizadas da esquerda para a direita.
+                Geralmente, há um pequeno espaço entre a terceira faixa e a faixa de tolerância para indicar a direção correta de leitura. Aqui está um exemplo para ilustrar:
+            ]]>
+    </string>
+    <string name="help_example">
+        <![CDATA[
+                <br/>1. O <font color="#FF2100">primeiro</font> (vermelho) dígito significativo do valor do componente (lado esquerdo)
+                <br/>2. O <font color="#6967CE">segundo</font> (violeta) dígito significativo (alguns resistores de precisão possuem um terceiro dígito significativo, totalizando cinco faixas)
+                <br/>3. O <font color="#528F65">multiplicador</font> decimal (verde) (número de zeros finais ou potência de 10)
+                <br/>4. Se presente, indica a <font color="#C08327">tolerância</font> (dourado) do valor em porcentagem (sem faixa significa 20%)
+
+                <br/>É seguro afirmar que a leitura deve <b><font color="#CC8D46">começar pela extremidade com mais faixas.</font></b>
+            ]]>
+    </string>
+    <string name="help_color_table">
+        <![CDATA[
+                <br/><br/><b><font color="#CC8D46">Tabela de códigos de cores</font></b>
+                <br/><br/>A norma IEC 60062:2016 define métodos de codificação para os valores de resistência ou capacitância e suas tolerâncias,
+                incluindo a codificação por cores para resistores. Também fornece sistemas de codificação de datas adequados para a marcação de pequenos componentes. As cores são as seguintes:
+            ]]>
+
+    </string>
+
+    <string name="help_four_band_resistor_introduction">
+    <Data>
+        <![CDATA[
+            O resistor de quatro faixas é a variação mais comum. Esses resistores possuem duas faixas para o valor da resistência, um multiplicador e uma faixa de tolerância.
+            <br/>Para ler um resistor de quatro faixas, procure as faixas coloridas em um lado do resistor e siga estes passos:
+
+            <br/><br/><b><font color="#CC8D46">1. Identifique as faixas e seus significados</font></b>
+            <br/><br/><b><font color="#CC8D46">2. Leia as faixas de cores na sequência</font></b>
+            <br/><br/><b><font color="#CC8D46">3. Decodifique a cor de cada faixa usando uma tabela de cores</font></b>
+            <br/><br/><b><font color="#CC8D46">4. Combine os valores das duas primeiras faixas, multiplique pelo fator representado pela terceira faixa e aplique a tolerância da quarta faixa.</font></b>
+            <br/><br/>
+            Exemplo
+        ]]>
+    </Data>
+</string>
+
+    <string name="help_four_band_resistor_example">
+        <![CDATA[
+            No exemplo mostrado acima, as 4 faixas são
+            <font color="#FF2100">vermelha</font>,
+            <font color="#6967CE">violeta</font>,
+            <font color="#528F65">verde</font> e
+            <font color="#fab66e">dourada</font>. Usando a tabela de códigos de cores, descobre-se que <font color="#FF2100">vermelho</font> representa 2 e <font color="#6967CE">violeta</font> representa 7.
+            A terceira faixa é o multiplicador, com <font color="#528F65">verde</font> representando um valor de multiplicador de 100k. Portanto, o valor desse resistor é 27 * 100k = 2,70 MΩ. A faixa dourada significa que o resistor tem uma tolerância de 5%.
+            O valor da resistência está, portanto, entre 2,565,000 Ω e 2,835,000 Ω (2,70 M ± 5%).
+            <br/><br/>Se a faixa de tolerância for deixada em branco, o resultado será um resistor de 3 faixas. Isso significa que o valor da resistência permanece o mesmo, <font color="#CC8D46">mas a tolerância é de 20%</font>.
+        ]]>
+    </string>
+
+    <string name="help_five_band_resistor_introduction">
+        <![CDATA[
+            Os resistores de cinco faixas são uma variação dos resistores de quatro faixas, projetados para aplicações que exigem alta precisão. Esses resistores incluem uma faixa adicional para indicar um terceiro dígito significativo, proporcionando maior precisão.
+            <br/>Para ler um resistor de cinco faixas, procure as faixas coloridas em um lado do resistor e siga estes passos:
+
+            <br/><br/><b><font color="#CC8D46">1. Identifique o maior espaço entre a terceira faixa e a última faixa, que é a faixa de tolerância.</font></b>
+            <br/><br/><b><font color="#CC8D46">2. Comece pelo lado mais próximo dos dígitos significativos e vá em direção à faixa de tolerância.</font></b>
+            <br/><br/><b><font color="#CC8D46">3. Decodifique a cor de cada faixa usando uma tabela de cores</font></b>
+            <br/><br/><b><font color="#CC8D46">4. Combine os valores das três primeiras faixas, multiplique pelo fator representado pela quarta faixa e aplique a tolerância da quinta faixa.</font></b>
+            <br/><br/>
+            Exemplo
+        ]]>
+    </string>
+
+    <string name="help_five_band_resistor_example">
+        <![CDATA[
+            No exemplo mostrado acima, as 5 faixas são
+            <font color="#FF2100">vermelha</font>,
+            <font color="#FF2100">vermelha</font>,
+            <font color="#000">preta</font>,
+            <font color="#FF6400">laranja</font> e
+            <font color="#512627">marrom</font>. Usando a tabela de códigos de cores, descobre-se que as cores <font color="#FF2100">vermelhas</font> representam 2.
+            O terceiro dígito significativo é <font color="#000">preto</font>, valor de 0. A faixa do multiplicador é <font color="#FF6400">laranja</font>. Portanto, o valor desse resistor é 220 * 1k = 220 kΩ.
+            A faixa <font color="#512627">marrom</font> significa que o resistor tem uma tolerância de 1%.
+            O valor da resistência está, portanto, entre 217,800 Ω e 222,200 Ω (220 k ± 1%).
+            <br/><br/>Se a faixa de tolerância for deixada em branco, o resultado será um resistor de 3 faixas. Isso significa que o valor da resistência permanece o mesmo, <font color="#CC8D46">mas a tolerância é de 20%</font>.
+        ]]>
+    </string>
+
+    <string name="help_six_band_resistor_introduction">
+        <![CDATA[
+            Os resistores de seis faixas são projetados para aplicações ultra-precisas e possuem uma sexta faixa adicional que especifica o coeficiente de temperatura.
+            <br/>Para ler um resistor de seis faixas, procure as faixas coloridas em um lado do resistor e siga estes passos:
+
+            <br/><br/><b><font color="#CC8D46">1. Identifique o maior espaço entre a terceira faixa e a quinta faixa. A quinta faixa é a faixa de tolerância, e a sexta faixa é o coeficiente de temperatura.</font></b>
+            <br/><br/><b><font color="#CC8D46">2. Comece pelo lado mais próximo dos dígitos significativos e leia em direção às faixas de tolerância e coeficiente de temperatura.</font></b>
+            <br/><br/><b><font color="#CC8D46">3. Decodifique a cor de cada faixa usando uma tabela de cores</font></b>
+            <br/><br/><b><font color="#CC8D46">4. Combine os valores das três primeiras faixas, multiplique pelo fator representado pela quarta faixa e aplique a tolerância da quinta faixa.</font></b>
+            <br/><br/>
+            Exemplo
+        ]]>
+    </string>
+
+    <string name="help_six_band_resistor_example">
+        <![CDATA[
+            No exemplo mostrado acima, as 6 faixas são
+            <font color="#FF6400">laranja</font>,
+            <font color="#FF6400">laranja</font>,
+            <font color="#000">preta</font>,
+            <font color="#FF6400">laranja</font>,
+            <font color="#fab66e">dourada</font> e
+            <font color="#512627">marrom</font>. Usando a tabela de códigos de cores, descobre-se que <font color="#FF6400">laranja</font> representa 3 e <font color="#000">preto</font> representa 0.
+            A quarta faixa é o multiplicador, com <font color="#FF6400">laranja</font> representando um valor de multiplicador de 1k. A faixa <font color="#fab66e">dourada</font> indica uma tolerância de 5%, e o PPM é <font color="#512627">marrom</font>, com valor de 100 ppm.
+            Portanto, o valor desse resistor é 330 * 1k = 330 kΩ.
+            O valor da resistência está, portanto, entre 313,500 Ω e 346,500 Ω (330k ± 5% 100 ppm).
+        ]]>
+    </string>
+</resources>

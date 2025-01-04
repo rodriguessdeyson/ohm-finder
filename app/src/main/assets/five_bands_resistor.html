@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="file:///android_asset/five_bands_resistor.css">
+    </head>
+
+    <body>
+        <div id="resistor-content">
+            <div class="part1"></div>
+            <div class="part2">
+                <div id="firstBand" class="band" style="background: cyan box-shadow: cyan 0px 0px 5px;"> </div>
+                <div id="secondBand" class="band" style="background: cyan; box-shadow: cyan 0px 0px 5px;"></div>
+            </div>
+            <div id="part3">
+                <div id="thirdBand" class="band" style="background: cyan; box-shadow: cyan 0px 0px 5px;"></div>
+                <div id="multiplierBand" class="band" style="background: cyan; box-shadow: cyan 0px 0px 5px;"></div>
+            </div>
+            <div class="part2">
+                <div id="toleranceBand" class="band" style="background: cyan; box-shadow: cyan 0px 0px 5px;"></div>
+            </div>
+            <div class="part1"></div>
+        </div>
+    </body>
+
+    <script type="text/javascript">
+        function updateBandColor(bandId, color) {
+          const band = document.getElementById(bandId);
+          band.style['background'] = color;
+          band.style['box-shadow'] = `${color} 0px 0px 5px`;
+        }
+
+        function setFocus(bandId) {
+          const band = document.getElementById(bandId);
+          band.classList.add('fadeBand');
+        }
+
+        function removeFocus(bandId) {
+          const band = document.getElementById(bandId);
+          band.classList.remove('fadeBand');
+        }
+    </script>
+</html>

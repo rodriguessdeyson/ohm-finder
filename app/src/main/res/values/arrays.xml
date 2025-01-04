@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="band">
+        <item>@string/black_band</item>
+        <item>@string/brown_band</item>
+        <item>@string/red_band</item>
+        <item>@string/orange_band</item>
+        <item>@string/yellow_band</item>
+        <item>@string/green_band</item>
+        <item>@string/blue_band</item>
+        <item>@string/violet_band</item>
+        <item>@string/grey_band</item>
+        <item>@string/white_band</item>
+    </array>
+    <integer-array name="band_colors">
+        <item>@color/resistor_black</item>
+        <item>@color/resistor_brown</item>
+        <item>@color/resistor_red</item>
+        <item>@color/resistor_orange</item>
+        <item>@color/resistor_yellow</item>
+        <item>@color/resistor_green</item>
+        <item>@color/resistor_blue</item>
+        <item>@color/resistor_violet</item>
+        <item>@color/resistor_grey</item>
+        <item>@color/resistor_white</item>
+    </integer-array>
+
+    <array name="multiplier_band">
+        <item>@string/black_band</item>
+        <item>@string/brown_band</item>
+        <item>@string/red_band</item>
+        <item>@string/orange_band</item>
+        <item>@string/yellow_band</item>
+        <item>@string/green_band</item>
+        <item>@string/blue_band</item>
+        <item>@string/violet_band</item>
+        <item>@string/grey_band</item>
+        <item>@string/white_band</item>
+        <item>@string/gold_band</item>
+        <item>@string/silver_band</item>
+    </array>
+    <integer-array name="multiplier_band_colors">
+        <item>@color/resistor_black</item>
+        <item>@color/resistor_brown</item>
+        <item>@color/resistor_red</item>
+        <item>@color/resistor_orange</item>
+        <item>@color/resistor_yellow</item>
+        <item>@color/resistor_green</item>
+        <item>@color/resistor_blue</item>
+        <item>@color/resistor_violet</item>
+        <item>@color/resistor_grey</item>
+        <item>@color/resistor_white</item>
+        <item>@color/resistor_gold</item>
+        <item>@color/resistor_silver</item>
+    </integer-array>
+
+    <array name="tolerance_band">
+        <item>@string/brown_band</item>
+        <item>@string/red_band</item>
+        <item>@string/green_band</item>
+        <item>@string/blue_band</item>
+        <item>@string/violet_band</item>
+        <item>@string/grey_band</item>
+        <item>@string/gold_band</item>
+        <item>@string/silver_band</item>
+    </array>
+    <integer-array name="tolerance_band_colors">
+        <item>@color/resistor_brown</item>
+        <item>@color/resistor_red</item>
+        <item>@color/resistor_green</item>
+        <item>@color/resistor_blue</item>
+        <item>@color/resistor_violet</item>
+        <item>@color/resistor_grey</item>
+        <item>@color/resistor_gold</item>
+        <item>@color/resistor_silver</item>
+    </integer-array>
+    <integer-array name="tolerance_value">
+        <item>100</item>
+        <item>200</item>
+        <item>50</item>
+        <item>25</item>
+        <item>10</item>
+        <item>5</item>
+        <item>500</item>
+        <item>1000</item>
+    </integer-array>
+
+    <array name="ppm_band">
+        <item>@string/brown_band</item>
+        <item>@string/red_band</item>
+        <item>@string/orange_band</item>
+        <item>@string/yellow_band</item>
+        <item>@string/blue_band</item>
+        <item>@string/violet_band</item>
+    </array>
+    <integer-array name="ppm_band_colors">
+        <item>@color/resistor_brown</item>
+        <item>@color/resistor_red</item>
+        <item>@color/resistor_orange</item>
+        <item>@color/resistor_yellow</item>
+        <item>@color/resistor_blue</item>
+        <item>@color/resistor_violet</item>
+    </integer-array>
+    <integer-array name="ppm_value">
+        <item>100</item>
+        <item>50</item>
+        <item>15</item>
+        <item>25</item>
+        <item>10</item>
+        <item>5</item>
+    </integer-array>
+
+</resources>

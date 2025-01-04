@@ -1,0 +1,216 @@
+<resources>
+    <string name="app_name">Ohm Finder</string>
+    <string name="title_activity_main">Ohm Finder</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- Strings used for Menu -->
+    <string name="menu_help">Help</string>
+    <string name="menu_history">Previous values</string>
+    <string name="menu_support">Support</string>
+
+    <!-- Strings used for first for navigation Section-->
+    <string name="first_fragment_label">Ohm Finder</string>
+
+    <!-- Strings used for second for navigation Section-->
+    <string name="second_fragment_label">4 Band</string>
+    <string name="four_band_resistor_model">4 Band Resistor</string>
+    <string name="four_band_resistor_model_tip">2 significant digits, 1 multiplier and 1 tolerance</string>
+
+    <!-- Strings used for third for navigation Section-->
+    <string name="third_fragment_label">5 Band</string>
+    <string name="five_band_resistor_model">5 Band Resistor</string>
+    <string name="five_band_resistor_model_tip">3 significant digits, 1 multiplier and 1 tolerance</string>
+
+    <!-- Strings used for fourth for navigation Section-->
+    <string name="fourth_fragment_label">6 Band</string>
+    <string name="six_band_resistor_model">6 Band Resistor</string>
+    <string name="six_band_resistor_model_tip">3 significant digits, 1 multiplier and 2 tolerances</string>
+
+    <!-- Strings used for results Section-->
+    <string name="output_title">Output</string>
+    <string name="resistor_value">Resistor value:</string>
+    <string name="resistor_wvalue">Resistor value: %1$s </string>
+    <string name="resistor_tolerance_value">Tolerance: ±%1$s</string>
+    <string name="resistor_value_range">Range: %1$s ~ %2$s</string>
+    <string name="resistor_ppm_value">PPM: %1$s</string>
+
+    <!-- Strings used for band colors Section-->
+    <string name="black_band">Black</string>
+    <string name="brown_band">Brown</string>
+    <string name="red_band">Red</string>
+    <string name="orange_band">Orange</string>
+    <string name="yellow_band">Yellow</string>
+    <string name="green_band">Green</string>
+    <string name="blue_band">Blue</string>
+    <string name="violet_band">Violet</string>
+    <string name="grey_band">Grey</string>
+    <string name="white_band">White</string>
+    <string name="gold_band">Gold</string>
+    <string name="silver_band">Silver</string>
+
+   <!-- General and tips Section-->
+    <string name="resistor_parameters_title">Resistor Parameters</string>
+    <string name="resistor_parameters_subtitle">Select the colors to determine the value and tolerance of the resistor</string>
+    <string name="tip_resistor_reading">You read resistor bands beginning with the end that has the most bands.</string>
+    <string name="tip_resistor_model">Choose the resistor model based on the number of bands</string>
+    <string name="first_band_hint">First band color</string>
+    <string name="second_band_hint">Second band color</string>
+    <string name="multiplier_band_hint">Multiplier band color</string>
+    <string name="tolerance_band_hint">Tolerance band color</string>
+    <string name="third_band_hint">Third band color</string>
+    <string name="ppm_band_hint">PPM</string>
+    <string name="button_go">Go</string>
+    <string name="resistor_delete_dialog_title">Delete resistor?</string>
+    <string name="resistor_delete_dialog_message">This action can not be undone.</string>
+    <string name="resistor_delete_dialog_yes">Delete</string>
+    <string name="resistor_delete_dialog_no">Cancel</string>
+    <string name="resistor_deleted">Resistor deleted</string>
+    <string name="resistor_not_deleted">Resistor not deleted</string>
+    <string name="resistor_created_at">Created at: %1$s</string>
+    <string name="resistor_history">Previous resistors</string>
+    <string name="resistor_history_empty">No previous resistor</string>
+    <string name="resistor_history_size">%1$d of %2$d items</string>
+    <string name="button_reset_description">Reset all fields</string>
+
+    <!-- Help Section -->
+    <string name="help_title">Help</string>
+    <string name="help_introduction">
+        <Data>
+            <![CDATA[
+                The <b><font color="#CC8D46">Ohm Finder</font></b> app is your companion for working with resistors! Whether you\'re a student, engineer, or a DIY electronics enthusiast,
+                <b>Ohm Finder</b> simplifies decoding resistor color codes, giving you precise resistance values in just seconds.
+
+                <br/><br/><b><font color="#CC8D46">What is a Resistor?</font></b>
+                <br/><br/>A resistor is an essential electrical component that restricts the flow of electric current in a circuit.
+                It plays a vital role in controlling voltage and current levels, protecting sensitive components, and dividing voltages.
+                Resistors are coded with colored bands following international standards, such as <b>IEC 60062:2016</b>, enabling easy identification of their resistance values and tolerances without using measurement tools.
+                <br/><br/>The color bands represent significant digits, a multiplier, and tolerance. In some cases, additional bands specify reliability or temperature coefficient.
+                This coding system is indispensable for ensuring the correct application of resistors in electronic circuits.
+
+                <br/><br/><b><font color="#CC8D46">Understanding the Color Band System</font></b>
+                <br/><br/>The resistor color code system uses bands of colors to indicate the resistance value, tolerance, and occasionally, the temperature coefficient of a resistor.
+                There are three main resistor color coding systems: <b>4-Band</b>, <b>5-Band</b>, and <b>6-Band</b>.
+                <br/><br/>Each system utilizes a specific number of colored bands, where each band conveys critical information about the resistor\'s characteristics,
+                such as resistance value and tolerance. Understanding these codes is key to accurately determining the resistor\'s specifications and ensuring proper usage in electronic circuits.
+
+                <br/><br/>To correctly read these codes, hold the resistor so the color bands are viewed from left to right.
+                A slight gap between the third band and the tolerance band typically indicates the correct reading direction. Here\'s an example to illustrate:
+            ]]>
+        </Data>
+    </string>
+    <string name="help_example">
+        <Data>
+            <![CDATA[
+                <br/>1. The <font color="#FF2100">first</font> (red) significant figure of component value (left side)
+                <br/>2. The <font color="#6967CE">second</font> (violet) significant figure (some precision resistors have a third significant figure, and thus five bands)
+                <br/>3. The decimal <font color="#528F65">multiplier</font> (green) (number of trailing zeroes, or power of 10 multiplier)
+                <br/>4. If present, indicates <font color="#C08327">tolerance</font> (gold) of value in percent (no band means 20%)
+
+                <br/>It is safe to state that the reading should <b><font color="#CC8D46">start beginning with the end that has the most bands.</font></b>
+            ]]>
+        </Data>
+    </string>
+    <string name="help_color_table">
+        <Data>
+            <![CDATA[
+                <br/><br/><b><font color="#CC8D46">Color code table</font></b>
+                <br/><br/>The IEC 60062:2016 provides coding methods for the resistance or capacitance value and its tolerance,
+                including colour coding for resistors. It also provides date code systems suitable for the marking of small components. The colors is as follows:
+            ]]>
+        </Data>
+    </string>
+
+    <string name="help_four_band_resistor_introduction">
+        <Data>
+            <![CDATA[
+                The four band resistor is the most common variation. These resistors have two bands for the resistance value, one multiplier and one tolerance band.
+                <br/>To read a four-banded resistor, you\'ll want to look for the colored bands on one side of the resistor and follow these steps:
+
+                <br/><br/><b><font color="#CC8D46">1. Identify the bands and their meaning</font></b>
+                <br/><br/><b><font color="#CC8D46">2. Read the color bands in sequence</font></b>
+                <br/><br/><b><font color="#CC8D46">3. Decode each band\'s color using a color chart</font></b>
+                <br/><br/><b><font color="#CC8D46">4. Combine the values of the first two bands, multiply by the factor represented by the third band, and apply the tolerance from the fourth band.</font></b>
+                <br/><br/>
+                Example
+            ]]>
+        </Data>
+    </string>
+    <string name="help_four_band_resistor_example">
+        <Data>
+            <![CDATA[
+                In the example shown above, the 4 bands are
+                <font color="#FF2100">red</font>,
+                <font color="#6967CE">violet</font>,
+                <font color="#528F65">green</font> and
+                <font color="#fab66e">gold</font>. By using the color code chart, one finds that <font color="#FF2100">red</font> stands for 2 and <font color="#6967CE">violet</font> for 7.
+                The third band is the multiplier, with <font color="#528F65">green</font> representing a multiplier value of 6. Therefore, the value of this resistor is 27 * 100k = 2.70 MΩ. The gold band means that the resistor has a tolerance of 5%.
+                The resistance value lies therefore between 2.565000 Ω and 2.835000 Ω (2.70M ± 5%).
+                <br/><br/>If the tolerance band is left blank, the result is a 3 band resistor. This means that the resistance value remains the same, <font color="#CC8D46">but the tolerance is 20%</font>.
+            ]]>
+        </Data>
+    </string>
+
+    <string name="help_five_band_resistor_introduction">
+        <Data>
+            <![CDATA[
+                Five-band resistors are a variation of four-band resistors, designed for applications requiring high precision. These resistors include an additional band to indicate a third significant digit, providing greater accuracy.
+                <br/>To read a five-banded resistor, you\'ll want to look for the colored bands on one side of the resistor and follow these steps:
+
+                <br/><br/><b><font color="#CC8D46">1. Identify the larger gap between the third band and the last band, which is the tolerance band.</font></b>
+                <br/><br/><b><font color="#CC8D46">2. Start from the side closest to the significant digits and move towards the tolerance band.</font></b>
+                <br/><br/><b><font color="#CC8D46">3. Decode each band\'s color using a color chart</font></b>
+                <br/><br/><b><font color="#CC8D46">4. Combine the values of the first three bands, multiply by the factor represented by the fourth band, and apply the tolerance from the fifth band.</font></b>
+                <br/><br/>
+                Example
+            ]]>
+        </Data>
+    </string>
+    <string name="help_five_band_resistor_example">
+        <Data>
+            <![CDATA[
+                In the example shown above, the 5 bands are
+                <font color="#FF2100">red</font>,
+                <font color="#FF2100">red</font>,
+                <font color="#000">black</font>
+                <font color="#FF6400">orange</font> and
+                <font color="#512627">brown</font>. By using the color code chart, one finds that first and second color <font color="#FF2100">red</font> stands for 2.
+                The third significant digit is <font color="#000">black</font>, value of 0. The multiplier band is <font color="#FF6400">orange</font>. Therefore, the value of this resistor is 220 * 1k = 220 kΩ.
+                The <font color="#512627">brown</font> band means that the resistor has a tolerance of 1%.
+                The resistance value lies therefore between 217.800 Ω and 222.200 Ω (200k ± 1%).
+                <br/><br/>If the tolerance band is left blank, the result is a 3 band resistor. This means that the resistance value remains the same, <font color="#CC8D46">but the tolerance is 20%</font>.
+            ]]>
+        </Data>
+    </string>
+
+    <string name="help_six_band_resistor_introduction">
+        <Data>
+            <![CDATA[
+                Six-band resistors are designed for ultra-precise applications and have an additional sixth band that specifies the temperature coefficient.
+                <br/>To read a four-banded resistor, you\'ll want to look for the colored bands on one side of the resistor and follow these steps:
+
+                <br/><br/><b><font color="#CC8D46">1. Identify the larger gap between the third band and the fifth band. The fifth band is the tolerance band, and the sixth band is the temperature coefficient.</font></b>
+                <br/><br/><b><font color="#CC8D46">2. Start from the side closest to the significant digits and read towards the tolerance and temperature coefficient bands.</font></b>
+                <br/><br/><b><font color="#CC8D46">3. Decode each band\'s color using a color chart</font></b>
+                <br/><br/><b><font color="#CC8D46">4. Combine the values of the first three bands, multiply by the factor represented by the fourth band, and apply the tolerance from the fifth band.</font></b>
+                <br/><br/>
+                Example
+            ]]>
+        </Data>
+    </string>
+    <string name="help_six_band_resistor_example">
+        <Data>
+            <![CDATA[
+                In the example shown above, the 6 bands are
+                <font color="#FF6400">orange</font>,
+                <font color="#FF6400">orange</font>,
+                <font color="#000">black</font>,
+                <font color="#FF6400">orange</font>,
+                <font color="#fab66e">gold</font> and
+                <font color="#512627">brown</font>. By using the color code chart, one finds that <font color="#FF6400">orange</font> stands for 3 and <font color="#000">black</font> for 0.
+                The fourth band is the multiplier, with <font color="#FF6400">orange</font> representing a multiplier value of 3. The <font color="#fab66e">gold</font> is tolerance value of 5% and PPM <font color="#512627">brown</font>, value of 100 ppm.
+                Therefore, the value of this resistor is 330 * 1k = 330 kΩ.
+                The resistance value lies therefore between 313.500 Ω and 346.500 Ω (330k ± 5% 100ppm).
+            ]]>
+        </Data>
+    </string>
+</resources>
